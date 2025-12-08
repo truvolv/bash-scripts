@@ -119,6 +119,7 @@ This script was written for batch updates across our member repos. In this insta
 
    - Logs per-app updates in `logs.csv` with details on status (`success`, `partial`, `no-changes`, etc.)
    - Logs repo-level issues in `error.csv` (e.g., clone failures, missing directories).
+   - Logs per-app repos that require manual updates in `manual-updates.csv` with details on what has been updated and what was not.
 
 7. **Commits and pushes changes**
 
@@ -133,6 +134,7 @@ This script was written for batch updates across our member repos. In this insta
 - **`logs.csv`** — App-level results including repo name, app name, status, and notes.
 - **`error.csv`** — Repository-level issues or skips (e.g., missing branches, failed clones).
 - **`all-repos/`** — Local clones of all processed repositories.
+- **`manual-updates.csv`** — App-level repos that require manual updates including repo name, app name, status, and notes.
 
 ### 🧠 Example Workflow
 

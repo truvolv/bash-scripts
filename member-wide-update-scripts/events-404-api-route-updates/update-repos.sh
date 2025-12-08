@@ -113,7 +113,9 @@ while IFS= read -r repo_name || [[ -n "$repo_name" ]]; do
         continue
     fi
     
-    changes_made=false
+    page_404_changes_made=false
+    core_events_changes_made=false
+    api_route_changes_made=false
     pr_url=""
     
     # Step 4-7: Iterate over subdirectories in apps/
@@ -144,14 +146,14 @@ while IFS= read -r repo_name || [[ -n "$repo_name" ]]; do
         
         # Check if API route is already updated
         if [[ -f "$app_dir/app/api/[...slug]/route.ts" ]]; then
-            if grep -q "export * from \"@truvolv/orson-seelib/api/router\";" "$app_dir/app/api/[...slug]/route.ts"; then
+            if grep -q "exporting all route handlers from orson-seelib" "$app_dir/app/api/[...slug]/route.ts"; then
                 api_route_already_updated=true
             fi
         fi
     
         # Check if 404 page is already updated
-        if [[ -f "$app_dir/not-found.tsx" ]]; then
-            if grep -q "<NotFoundPage slug={params?.slug} />" "$app_dir/not-found.tsx"; then
+        if [[ -f "$app_dir/app/not-found.tsx" ]]; then
+            if grep -q "<NotFoundPage slug={params?.slug} />" "$app_dir/app/not-found.tsx"; then
                 page_404_already_updated=true
             fi
         fi
@@ -170,9 +172,13 @@ while IFS= read -r repo_name || [[ -n "$repo_name" ]]; do
         fi
         
         # Step 5: Update API route if no custom member edits have been made to the file, the route should exist
-        if [[ -f "$app_dir/app/api/[...slug]/route.ts" ]]; then
-        if grep -q "import { GET } from \"@truvolv/orson-seelib/api/router\";" "$app_dir/app/api/[...slug]/route.ts" && \
-        grep -q "export { GET };" "$app_dir/app/api/[...slug]/route.ts"; then
+        if [[ "$api_route_already_updated" == true ]]; then
+            echo "      Skipping API route update in $app_name/app/api/[...slug]/route.ts - already updated"
+            api_route_updated=false
+            api_route_changes_made=false
+        elif [[ -f "$app_dir/app/api/[...slug]/route.ts" ]]; then
+            if grep -q "import { GET } from \"@truvolv/orson-seelib/api/router\";" "$app_dir/app/api/[...slug]/route.ts" && \
+            grep -q "export { GET };" "$app_dir/app/api/[...slug]/route.ts"; then
             echo "      Updating API route in $app_name/app/api/[...slug]/route.ts"
                 # Replace all content with new API route content
 
@@ -182,7 +188,7 @@ while IFS= read -r repo_name || [[ -n "$repo_name" ]]; do
 export * from "@truvolv/orson-seelib/api/router";
 EOF
             api_route_updated=true
-            changes_made=true
+            api_route_changes_made=true
 
             else
                 echo "      Skipping API route update in $app_name/app/api/[...slug]/route.ts - custom member edits detected"
@@ -190,17 +196,21 @@ EOF
 
                 needs_manual_update=true
                 api_route_updated=false
-                changes_made=false
+                api_route_changes_made=false
                 
             fi
         fi
 
         # Step 6: Update 404 page if it exists, else create it
-        if [[ -f "$app_dir/not-found.tsx" ]]; then
-            echo "      Updating 404 page in $app_name/not-found.tsx"
+        if [[ "$page_404_already_updated" == true ]]; then
+            echo "      Skipping 404 page update in $app_name/app/not-found.tsx - already updated"
+            page_404_updated=false
+            page_404_changes_made=false
+        elif [[ -f "$app_dir/app/not-found.tsx" ]]; then
+            echo "      Updating 404 page in $app_name/app/not-found.tsx"
             # Replace all content with new 404 page content
 
-            cat > "$app_dir/not-found.tsx" << 'EOF'
+            cat > "$app_dir/app/not-found.tsx" << 'EOF'
 import { Metadata } from "next";
 import { generate404PageMeta } from "@truvolv/orson-seelib/lib/generate404PageMeta";
 import { NotFoundPage } from "@truvolv/orson-seelib/components/page";
@@ -230,10 +240,10 @@ export default async function Page({
 EOF
             
             page_404_updated=true
-            changes_made=true
+            page_404_changes_made=true
         else
-            echo "      Creating 404 page file in $app_name/not-found.tsx"
-            cat > "$app_dir/not-found.tsx" << 'EOF'
+            echo "      Creating 404 page file in $app_name/app/not-found.tsx"
+            cat > "$app_dir/app/not-found.tsx" << 'EOF'
 import { Metadata } from "next";
 import { generate404PageMeta } from "@truvolv/orson-seelib/lib/generate404PageMeta";
 import { NotFoundPage } from "@truvolv/orson-seelib/components/page";
@@ -262,7 +272,7 @@ return (
 }
 EOF
             page_404_created=true
-            changes_made=true
+            page_404_changes_made=true
         fi
         
         # Step 7: Only create Core Events page if it doesn't exist
@@ -270,7 +280,8 @@ EOF
             echo "      Skipping update, Core Events page in $app_name/app/events/[...slug]/page.tsx already exists"
             
             core_event_page_updated=false
-            changes_made=false
+            core_event_page_already_updated=true
+            core_events_changes_made=false
         else
             echo "      Creating Core Events page file in $app_name/app/events/[...slug]/page.tsx"
             mkdir -p "$app_dir/app/events/[...slug]"
@@ -317,21 +328,21 @@ return (
 }
 EOF
             core_event_page_created=true
-            changes_made=true
+            core_events_changes_made=true
         fi
 
         # Determine final status and notes based on the updates made
         notes=""
-        if [[ "$api_route_updated" == true && "$page_404_updated" == true && "$core_event_page_updated" == true ]]; then
+        if [[ ("$api_route_updated" == true || "$api_route_already_updated" == true) && ("$page_404_updated" == true || "$page_404_already_updated" == true) && ("$core_event_page_updated" == true || "$core_event_page_already_updated" == true) ]]; then
             notes="API route, 404 page, and core events page updated"
             status="success"
-        elif [[ "$api_route_updated" == true && "$page_404_created" == true && "$core_event_page_created" == true ]]; then
+        elif [[ ("$api_route_updated" == true || "$api_route_already_updated" == true) && "$page_404_created" == true && "$core_event_page_created" == true ]]; then
             notes="API route updated, 404 page and core events page created"
             status="success"
-        elif [[ "$api_route_updated" == true && "$page_404_updated" == true && "$core_event_page_created" == true ]]; then
+        elif [[ ("$api_route_updated" == true || "$api_route_already_updated" == true) && ("$page_404_updated" == true || "$page_404_already_updated" == true) && "$core_event_page_created" == true ]]; then
             notes="API route and 404 page updated, core events page created"
             status="success"
-        elif [[ "$api_route_updated" == true && "$page_404_created" == true && "$core_event_page_updated" == true ]]; then
+        elif [[ ("$api_route_updated" == true || "$api_route_already_updated" == true) && "$page_404_created" == true && ("$core_event_page_updated" == true || "$core_event_page_already_updated" == true) ]]; then
             notes="API route updated, 404 page created, core events page updated"
             status="success"
         else
@@ -339,6 +350,8 @@ EOF
             status="partial"
             if [[ "$api_route_updated" == true ]]; then
                 notes="$notes API route updated,"
+            elif [[ "$api_route_already_updated" == true ]]; then
+                notes="$notes API route already updated,"
             else
                 notes="$notes API route not updated,"
             fi
@@ -346,6 +359,8 @@ EOF
                 notes="$notes 404 page updated,"
             elif [[ "$page_404_created" == true ]]; then
                 notes="$notes 404 page created,"
+            elif [[ "$page_404_already_updated" == true ]]; then
+                notes="$notes 404 page already updated,"
             else
                 notes="$notes 404 page not updated,"
             fi
@@ -353,6 +368,8 @@ EOF
                 notes="$notes core events page updated,"
             elif [[ "$core_event_page_created" == true ]]; then
                 notes="$notes core events page created,"
+            elif [[ "$core_event_page_already_updated" == true ]]; then
+                notes="$notes core events page already updated,"
             else
                 notes="$notes core events page not updated,"
             fi
@@ -366,7 +383,7 @@ EOF
         fi
 
         # Count toward batch only if all three components were successfully processed
-        if [[ "$api_route_updated" == true && ("$page_404_updated" == true || "$page_404_created" == true) && ("$core_event_page_updated" == true || "$core_event_page_created" == true) ]]; then
+        if [[ "$api_route_changes_made" == true  && "$page_404_changes_made" == true && "$core_events_changes_made" == true  ]]; then
             ((apps_fixed++))
             echo "APP STATUS: $repo_name/$app_name - $status - $notes" >> "$LOG_TRACKING_FILE"
             echo "    App fixed! Total fixed: $apps_fixed"
@@ -385,88 +402,88 @@ EOF
     fi
 
     # Step 8-9: Create branch, commit, push, and create PR if changes were made
-    # if [[ "$changes_made" == true ]]; then
-    #     # Comment out lines for Step #8-9 once tested and ready to push to main
-    #     branch_name="chore/TRUSPD-587/update-api-route-404-page-core-events-page"
+    if [[ "$page_404_changes_made" == true || "$api_route_changes_made" == true || "$core_events_changes_made" == true ]]; then
+        # Comment out lines for Step #8-9 once tested and ready to push to main
+        # branch_name="chore/TRUSPD-587/update-api-route-404-skeleton-page-events-page-2"
         
-    #     echo "  Cleaning up git references..."
-    #     git fetch --prune origin 2>/dev/null || true
+        # echo "  Cleaning up git references..."
+        # git fetch --prune origin 2>/dev/null || true
         
-    #     echo "  Creating branch: $branch_name"
-    #     if ! git checkout -b "$branch_name" 2>/dev/null; then
-    #         echo -e "${YELLOW}  Branch creation failed (likely already exists), discarding local changes${NC}"
-    #         echo "\"$repo_name\",\"branch-exists\",\"Branch creation failed, likely already exists - local changes discarded\"" >> "$ERROR_FILE"
+        # echo "  Creating branch: $branch_name"
+        # if ! git checkout -b "$branch_name" 2>/dev/null; then
+        #     echo -e "${YELLOW}  Branch creation failed (likely already exists), discarding local changes${NC}"
+        #     echo "\"$repo_name\",\"branch-exists\",\"Branch creation failed, likely already exists - local changes discarded\"" >> "$ERROR_FILE"
             
-    #         # Reset any local changes
-    #         git reset --hard HEAD
-    #         git clean -fd
+        #     # Reset any local changes
+        #     git reset --hard HEAD
+        #     git clean -fd
             
-    #         cd - > /dev/null
-    #         continue
-    #     fi
+        #     cd - > /dev/null
+        #     continue
+        # fi
         
-    #     echo "  Committing changes..."
-    #     git add .
-    #     if ! git commit -m "Update API route to include all handlers from orson-seelib, update or create 404 page skeleton, and update or create core events page"; then
-    #         echo -e "${RED}  Failed to commit changes${NC}"
-    #         echo "\"$repo_name\",\"commit-failed\",\"Could not commit changes\"" >> "$ERROR_FILE"
-    #         cd - > /dev/null
-    #         continue
-    #     fi
+        echo "  Committing changes..."
+        git add .
+        if ! git commit -m "Update API route to include all handlers from orson-seelib, update or create 404 page skeleton, and update or create core events page"; then
+            echo -e "${RED}  Failed to commit changes${NC}"
+            echo "\"$repo_name\",\"commit-failed\",\"Could not commit changes\"" >> "$ERROR_FILE"
+            cd - > /dev/null
+            continue
+        fi
         
-    #     echo "  Pushing branch..."
-    #     # Comment out line 451 and uncomment next line once tested to push without PR creation
-    #     if ! git push origin "$branch_name"; then
-    #     # if ! git push; then
+        echo "  Pushing branch..."
+        # Comment out line 451 and uncomment next line once tested to push without PR creation
+        # if ! git push origin "$branch_name"; then
+        if ! git push; then
 
-    #         echo -e "${RED}  Failed to push branch${NC}"
-    #         echo "\"$repo_name\",\"push-failed\",\"Could not push branch $branch_name\"" >> "$ERROR_FILE"
-    #         cd - > /dev/null
-    #         continue
-    #     fi
+            echo -e "${RED}  Failed to push branch${NC}"
+            echo "\"$repo_name\",\"push-failed\",\"Could not push branch $branch_name\"" >> "$ERROR_FILE"
+            cd - > /dev/null
+            continue
+        fi
         
-    #     echo "  Creating PR..."
-    #     pr_url=$(gh pr create \
-    #         --title "Update API route, 404 page, and core events page" \
-    #         --body "This PR updates:
+        # echo "  Creating PR..."
+        # pr_url=$(gh pr create \
+        #     --title "Update API route, 404 page, and core events page" \
+        #     --body "This PR updates:
 
-    #         - API route to include all handlers from orson-seelib
-    #         - 404 page skeleton to use NotFoundPage component from orson-seelib
-    #         - Events page to display separate events page using CoreEvent component from orson-seelib
+        #     - API route to include all handlers from orson-seelib
+        #     - 404 page skeleton to use NotFoundPage component from orson-seelib
+        #     - Events page to display separate events page using CoreEvent component from orson-seelib
 
-    #         Ticket: https://truvolv-company.monday.com/item/TRUSPD-583
+        #     Ticket: https://truvolv-company.monday.com/item/TRUSPD-583
 
-    #         This is an automated update across multiple repositories." \
-    #         --head "$branch_name" 2>&1)
+        #     This is an automated update across multiple repositories." \
+        #     --head "$branch_name" 2>&1)
 
-    #     if [[ $? -eq 0 ]]; then
-    #         echo -e "${GREEN}  ✓ PR created successfully${NC}"
+        # if [[ $? -eq 0 ]]; then
+        #     echo -e "${GREEN}  ✓ PR created successfully${NC}"
             
-    #         # Add to PR links file
-    #         echo "$repo_name: $pr_url" >> "$PR_LINKS_FILE"
+        #     # Add to PR links file
+        #     echo "$repo_name: $pr_url" >> "$PR_LINKS_FILE"
             
-    #         # Update the CSV with PR URL for successful app updates
-    #         temp_file=$(mktemp)
-    #         while IFS= read -r line; do
-    #             if [[ "$line" == *"\"$repo_name\","*"\",\"success\","* ]]; then
-    #                 # Replace the empty PR link with the actual URL
-    #                 echo "${line%,\"\"*},\"$pr_url\"" >> "$temp_file"
-    #             else
-    #                 echo "$line" >> "$temp_file"
-    #             fi
-    #         done < "$LOG_FILE"
-    #         mv "$temp_file" "$LOG_FILE"
-    #     else
-    #         echo -e "${RED}  Failed to create PR${NC}"
-    #         echo "\"$repo_name\",\"pr-failed\",\"Could not create pull request\"" >> "$ERROR_FILE"
-    #     fi
-    # else
-    #     echo -e "${YELLOW}  No changes needed${NC}"
-    #     echo "\"$repo_name\",\"no-changes\",\"Repository processed but no changes were needed\"" >> "$ERROR_FILE"
-    # fi
+        #     # Update the CSV with PR URL for successful app updates
+        #     temp_file=$(mktemp)
+        #     while IFS= read -r line; do
+        #         if [[ "$line" == *"\"$repo_name\","*"\",\"success\","* ]]; then
+        #             # Replace the empty PR link with the actual URL
+        #             echo "${line%,\"\"*},\"$pr_url\"" >> "$temp_file"
+        #         else
+        #             echo "$line" >> "$temp_file"
+        #         fi
+        #     done < "$LOG_FILE"
+        #     mv "$temp_file" "$LOG_FILE"
+        # else
+        #     echo -e "${RED}  Failed to create PR${NC}"
+        #     echo "\"$repo_name\",\"pr-failed\",\"Could not create pull request\"" >> "$ERROR_FILE"
+        # fi
+    else
+        echo -e "${YELLOW}  No changes needed${NC}"
+        echo "\"$repo_name\",\"no-changes\",\"Repository processed but no changes were needed\"" >> "$ERROR_FILE"
+    fi
     
-    # cd - > /dev/null
-    # echo ""
+    cd - > /dev/null
+    echo ""
     
 done < "$REPO_LIST_FILE"
 

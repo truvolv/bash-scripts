@@ -1,4 +1,5 @@
 all-repos/*
-
+node_modules/
 config.yaml
 prod-mongo-dump/
+.env*

@@ -1,0 +1,53 @@
+[2026-02-12T18:57:41.058Z] Initializing Payload (local mode)...
+[2026-02-12T18:57:43.663Z] Connected to database: payload-site-builder
+[2026-02-12T18:57:43.664Z] Batch size: 1
+[2026-02-12T18:57:43.664Z] Total sites to process: 2
+[2026-02-12T18:57:43.664Z] -------------------------------------
+[2026-02-12T18:57:43.664Z] UPDATING ... | Site: 689b64ea3e876cdbb37651f5 | Tenant: Localhost
+[2026-02-12T18:57:44.344Z] ⚠️  Error saving checkpoint: Unexpected end of JSON input
+[2026-02-12T18:57:44.344Z] UPDATED ✔ | Site: 689b64ea3e876cdbb37651f5 | Tenant: Localhost | Progress: 1/1 (100.00%)
+[2026-02-12T18:57:44.344Z] UPDATING ... | Site: 69385af763303871bbb608ff | Tenant: Grillos
+[2026-02-12T18:57:44.403Z] ⚠️  Error saving checkpoint: Unexpected end of JSON input
+[2026-02-12T18:57:44.403Z] UPDATED ✔ | Site: 69385af763303871bbb608ff | Tenant: Grillos | Progress: 2/1 (200.00%)
+[2026-02-12T18:57:44.403Z] -------------------------------------
+[2026-02-12T18:57:44.403Z] Finished. Total newly processed: 2, Skipped: 0
+[2026-02-12T18:58:07.990Z] Connecting to LOCAL DB
+[2026-02-12T18:58:07.991Z] 📂 Loading sites from: /home/echou/truvolv/truspeed-v2/save-all-sites/sites-to-update.json
+[2026-02-12T18:58:07.991Z] 📊 Loaded 2 sites from JSON file
+[2026-02-12T18:58:07.991Z] 📋 Loaded 0 previously completed sites from checkpoint
+[2026-02-12T18:58:07.991Z] Initializing Payload (local mode)...
+[2026-02-12T18:58:10.681Z] Connected to database: payload-site-builder
+[2026-02-12T18:58:10.682Z] Batch size: 1
+[2026-02-12T18:58:10.682Z] Total sites to process: 2
+[2026-02-12T18:58:10.682Z] -------------------------------------
+[2026-02-12T18:58:10.682Z] UPDATING ... | Site: 689b64ea3e876cdbb37651f5 | Tenant: Localhost
+[2026-02-12T18:58:11.294Z] UPDATED ✔ | Site: 689b64ea3e876cdbb37651f5 | Tenant: Localhost | Progress: 1/1 (100.00%)
+[2026-02-12T18:58:11.294Z] UPDATING ... | Site: 69385af763303871bbb608ff | Tenant: Grillos
+[2026-02-12T18:58:11.340Z] UPDATED ✔ | Site: 69385af763303871bbb608ff | Tenant: Grillos | Progress: 2/1 (200.00%)
+[2026-02-12T18:58:11.340Z] -------------------------------------
+[2026-02-12T18:58:11.340Z] Finished. Total newly processed: 2, Skipped: 0
+[2026-02-12T19:03:51.557Z] Connecting to PROD DB
+[2026-02-12T19:03:51.558Z] 📂 Loading sites from: /home/echou/truvolv/truspeed-v2/save-all-sites/sites-to-update.json
+[2026-02-12T19:03:51.558Z] 📊 Loaded 1 sites from JSON file
+[2026-02-12T19:03:51.558Z] 📋 Loaded 2 previously completed sites from checkpoint
+[2026-02-12T19:03:51.558Z] Initializing Payload (local mode)...
+[2026-02-12T19:03:54.634Z] Connected to database: admin
+[2026-02-12T19:03:54.634Z] Batch size: 1
+[2026-02-12T19:03:54.634Z] Total sites to process: 1
+[2026-02-12T19:03:54.634Z] -------------------------------------
+[2026-02-12T19:03:54.634Z] UPDATING ... | Site: Eden Testing - 689e19bcf57ebc6ea297c49f | Tenant: Demo
+[2026-02-12T19:03:56.385Z] UPDATED ✔ | Site: Eden Testing - 689e19bcf57ebc6ea297c49f | Tenant: Demo | Progress: 1/1 (100.00%)
+[2026-02-12T19:03:56.386Z] -------------------------------------
+[2026-02-12T19:03:56.386Z] Finished. Total newly processed: 1, Skipped: 0
+[2026-02-12T19:04:57.883Z] Connecting to PROD DB
+[2026-02-12T19:04:57.883Z] 📂 Loading sites from: /home/echou/truvolv/truspeed-v2/save-all-sites/sites-to-update.json
+[2026-02-12T19:04:57.883Z] 📊 Loaded 1 sites from JSON file
+[2026-02-12T19:04:57.883Z] 📋 Loaded 3 previously completed sites from checkpoint
+[2026-02-12T19:04:57.883Z] Initializing Payload (local mode)...
+[2026-02-12T19:05:00.931Z] Connected to database: admin
+[2026-02-12T19:05:00.931Z] Batch size: 1
+[2026-02-12T19:05:00.931Z] Total sites to process: 1
+[2026-02-12T19:05:00.931Z] -------------------------------------
+[2026-02-12T19:05:00.931Z] SKIPPING ↺ | Site: Eden Testing - 689e19bcf57ebc6ea297c49f | Tenant: Demo | Already completed in previous run
+[2026-02-12T19:05:00.931Z] -------------------------------------
+[2026-02-12T19:05:00.931Z] Finished. Total newly processed: 0, Skipped: 1

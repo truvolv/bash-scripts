@@ -18,6 +18,7 @@
   "homepage": "https://github.com/chunner-truvolv/bash-scripts#readme",
   "description": "",
   "dependencies": {
+    "@inquirer/prompts": "^8.3.0",
     "dotenv": "^17.2.3",
     "node-fetch": "^3.3.2"
   }

@@ -16,7 +16,7 @@ No install step needed. Just ensure `curl` and `jq` are available.
 
 ### Reindex all organizations
 ```bash
-PAYLOAD_URL=https://cms.truspeed.io \
+PAYLOAD_URL=https://truspeed.io \
 ADMIN_EMAIL=admin@example.com \
 ADMIN_PASSWORD=yourpassword \
 bash search-reindex-all-orgs/reindex-all-orgs.sh
@@ -32,11 +32,11 @@ bash search-reindex-all-orgs/reindex-all-orgs.sh
 If an org fails, the script prints a ready-to-run curl command at the end. You'll need a fresh JWT token — get one by re-running the login call:
 
 ```bash
-TOKEN=$(curl -s -X POST https://cms.truspeed.io/api/users/login \
+TOKEN=$(curl -s -X POST https://truspeed.io/api/users/login \
   -H "Content-Type: application/json" \
   -d '{"email":"admin@example.com","password":"yourpassword"}' | jq -r '.token')
 
-curl -X POST "https://cms.truspeed.io/api/search/reindex?locale=en" \
+curl -X POST "https://truspeed.io/api/search/reindex?locale=en" \
   -H "Content-Type: application/json" \
   -H "Authorization: JWT $TOKEN" \
   -H "Cookie: payload-tenant=<org-id>" \

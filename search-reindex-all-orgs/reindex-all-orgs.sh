@@ -12,7 +12,7 @@
 # Requires: curl, jq
 #
 # Usage:
-#   PAYLOAD_URL=https://cms.truspeed.io \
+#   PAYLOAD_URL=https://truspeed.io \
 #   ADMIN_EMAIL=admin@example.com \
 #   ADMIN_PASSWORD=yourpassword \
 #   bash reindex-all-orgs.sh

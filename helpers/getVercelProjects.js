@@ -85,7 +85,7 @@ export async function getVercelProjects() {
 
   while (hasMore) {
     const data = await fetchProjects(until);
-
+``
     const formattedProjects = data.projects.map((project, i) => {
       const urls = getProjectUrls(project);
 
@@ -96,9 +96,12 @@ export async function getVercelProjects() {
 
       const readyState = project?.latestDeployments?.[0]?.readyState;
 
-      const lastSuccessfulDeployment = project.latestDeployments?.find(
-        (deployment) => deployment.readyState === "READY"
-      );
+      // latestDeployments only contains a small window of recent deployments, so a READY one
+      // may not appear even if a successful deployment exists. Fall back to targets.production,
+      // which always reflects the current live production deployment.
+      const lastSuccessfulDeployment =
+        project.latestDeployments?.find((deployment) => deployment.readyState === "READY") ??
+        (project.targets?.production?.readyState === "READY" ? project.targets.production : null);
 
       if(!readyState === 'READY') {
         concerningBuilds.push({

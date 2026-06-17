@@ -21,8 +21,11 @@ async function main() {
     choices: ENV_CHOICES.filter((e) => e !== sourceEnvKey).map((e) => ({ name: e, value: e })),
   })
 
-  const orgSlug = await input({ message: 'Organization slug (the org in both source and destination — e.g. "acme-corp"):' })
-  if (!orgSlug) { console.error('Organization slug is required.'); process.exit(1) }
+  const sourceOrgSlug = await input({ message: `Source organization slug (in ${sourceEnvKey}):` })
+  if (!sourceOrgSlug) { console.error('Source organization slug is required.'); process.exit(1) }
+
+  const destOrgSlug = await input({ message: `Destination organization slug (in ${destEnvKey}):` })
+  if (!destOrgSlug) { console.error('Destination organization slug is required.'); process.exit(1) }
 
   const destSiteId = await input({ message: `Destination site ID (in ${destEnvKey}):` })
   if (!destSiteId) { console.error('Destination site ID is required.'); process.exit(1) }
@@ -30,8 +33,8 @@ async function main() {
   const pageId = await input({ message: 'Page ID to clone:' })
   if (!pageId) { console.error('Page ID is required.'); process.exit(1) }
 
-  const sourceEnv = getEnvConfig(sourceEnvKey, orgSlug)
-  const destEnv = getEnvConfig(destEnvKey, orgSlug)
+  const sourceEnv = getEnvConfig(sourceEnvKey, sourceOrgSlug)
+  const destEnv = getEnvConfig(destEnvKey, destOrgSlug)
   const suffix = `(${sourceEnv.label} clone)`
 
   console.log(`\nCloning page ${pageId} from ${sourceEnv.label} → ${destEnv.label}`)

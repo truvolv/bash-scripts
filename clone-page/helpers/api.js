@@ -21,7 +21,7 @@ async function apiRequest(envConfig, method, collection, queryOrPath = '', body 
 }
 
 export async function fetchDocument(envConfig, collection, id) {
-  return apiRequest(envConfig, 'GET', collection, `/${id}?depth=0`)
+  return apiRequest(envConfig, 'GET', collection, `/${id}?depth=1`)
 }
 
 export async function findByTitle(envConfig, collection, title) {

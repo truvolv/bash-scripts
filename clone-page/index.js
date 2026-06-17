@@ -4,7 +4,6 @@ import path from 'path'
 import { getEnvConfig, ENV_CHOICES } from './helpers/envConfig.js'
 import { fetchDocument, findByTitle, createDocument } from './helpers/api.js'
 import { processDocumentRelationships, stripSystemFields } from './helpers/cloneDocument.js'
-import { SYSTEM_FIELDS } from './helpers/relationshipMap.js'
 import { remapIds } from './helpers/remapIds.js'
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })

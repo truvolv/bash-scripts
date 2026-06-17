@@ -2,23 +2,16 @@ import { select } from '@inquirer/prompts'
 import {
   fetchDocument,
   findByTitle,
-  findBySlug,
   createDocument,
   uploadMedia,
 } from './api.js'
 import {
+  COLLECTION_FINGERPRINTS,
   COLLECTION_RELATIONSHIPS,
-  BLOCK_RELATIONSHIPS,
   SKIP_COLLECTIONS,
   SYSTEM_FIELDS,
 } from './relationshipMap.js'
 import { remapIds } from './remapIds.js'
-
-const LAYOUT_FIELDS = {
-  pages: 'layout',
-  page_templates: 'layout',
-  reusable_blocks: 'base_block', // single block object, not an array
-}
 
 /**
  * context shape:
@@ -42,10 +35,8 @@ export async function cloneDocument(collection, sourceId, context) {
   const id = extractId(sourceId)
   if (!id) return null
 
-  // Already processed — return the mapped destination ID
   if (idMap.has(id)) return idMap.get(id)
 
-  // Circular reference guard
   if (visited.has(id)) {
     console.log(`  ⚠ Skipping circular reference: ${collection}/${id}`)
     return null
@@ -57,7 +48,6 @@ export async function cloneDocument(collection, sourceId, context) {
     return null
   }
 
-  // --- Fetch source document ---
   console.log(`\n  Fetching ${collection}/${id} from ${sourceEnv.label}...`)
   let doc
   try {
@@ -67,15 +57,15 @@ export async function cloneDocument(collection, sourceId, context) {
     return null
   }
 
-  // --- Media: special handling (requires file upload) ---
   if (collection === 'media') {
     return cloneMedia(doc, context)
   }
 
-  // --- Resolve all nested relationships (populates idMap) ---
+  // Resolve all nested relationships by walking the full document.
+  // fetchDocument uses depth=1 so all immediate relationship fields are
+  // expanded to full objects — the generic walker handles them automatically.
   await processDocumentRelationships(collection, doc, context)
 
-  // --- Build cleaned document ---
   const cleanedDoc = stripSystemFields(doc)
   const titleField = getTitleField(cleanedDoc)
   if (titleField) {
@@ -84,7 +74,7 @@ export async function cloneDocument(collection, sourceId, context) {
 
   const remappedDoc = remapIds(cleanedDoc, idMap)
 
-  // --- Duplicate check in destination ---
+  // Duplicate check
   const existingTitle = titleField ? remappedDoc[titleField] : null
   if (existingTitle) {
     const existing = await findByTitle(destEnv, collection, existingTitle).catch(() => null)
@@ -109,7 +99,6 @@ export async function cloneDocument(collection, sourceId, context) {
     }
   }
 
-  // --- Create document in destination ---
   const label = existingTitle ?? id
   console.log(`  Creating ${collection} "${label}" in ${destEnv.label}...`)
   let created
@@ -131,19 +120,105 @@ export async function cloneDocument(collection, sourceId, context) {
 }
 
 /**
- * Process all relationship fields on a document (collection-level + layout blocks).
- * Populates context.idMap without creating the document itself.
- * Exported so index.js can call this for the page before creating it separately.
+ * Walk all fields of a document, cloning any embedded relationship objects
+ * discovered via fingerprinting. Also handles explicit special cases
+ * (categories/tags) that cannot be auto-detected.
+ *
+ * Exported so index.js can call it for the source page before creating it.
  */
 export async function processDocumentRelationships(collection, doc, context) {
-  await processCollectionRelationships(collection, doc, context)
+  // 1. Explicit handling for fields that can't be fingerprinted (categories/tags).
+  await processExplicitRelationships(collection, doc, context)
 
-  if (LAYOUT_FIELDS[collection]) {
-    await processLayout(collection, doc, context)
+  // 2. Generic walk — finds any expanded Payload document anywhere in the tree.
+  for (const value of Object.values(doc)) {
+    await walkAndClone(value, context)
   }
 }
 
-// --- Internal helpers ---
+// --- Generic walker ---
+
+/**
+ * Recursively walk `data`. Any object that looks like an expanded Payload
+ * document ({id, createdAt, updatedAt}) is fingerprinted and cloned.
+ */
+async function walkAndClone(data, context) {
+  if (!data || typeof data !== 'object') return
+
+  if (Array.isArray(data)) {
+    for (const item of data) await walkAndClone(item, context)
+    return
+  }
+
+  if (isPayloadDoc(data)) {
+    const collection = detectCollection(data)
+    if (collection && !SKIP_COLLECTIONS.has(collection)) {
+      await cloneDocument(collection, data.id, context)
+    }
+    // Unknown or skipped — leave as source ID; remapIds will collapse the
+    // expanded object to the source ID string (may be a broken link in dest).
+    return
+  }
+
+  // Embedded object (block, group field, richtext node, etc.) — walk into it.
+  for (const value of Object.values(data)) {
+    await walkAndClone(value, context)
+  }
+}
+
+function isPayloadDoc(obj) {
+  return (
+    typeof obj.id === 'string' &&
+    typeof obj.createdAt === 'string' &&
+    typeof obj.updatedAt === 'string'
+  )
+}
+
+function detectCollection(obj) {
+  for (const fp of COLLECTION_FINGERPRINTS) {
+    const hasRequired = fp.requiredFields.every((f) => f in obj)
+    const hasForbidden = fp.forbiddenFields?.some((f) => f in obj) ?? false
+    if (hasRequired && !hasForbidden) return fp.collection
+  }
+  return null
+}
+
+// --- Explicit handling for categories / tags ---
+
+async function processExplicitRelationships(collection, doc, context) {
+  const { destEnv, idMap } = context
+  const rels = COLLECTION_RELATIONSHIPS[collection] ?? []
+
+  for (const rel of rels) {
+    const rawValue = doc[rel.field]
+    if (!rawValue) continue
+
+    if (rel.treatment === 'match_title') {
+      const values = rel.hasMany
+        ? (Array.isArray(rawValue) ? rawValue : [rawValue])
+        : [rawValue]
+
+      for (const rawVal of values) {
+        const relId = extractId(rawVal)
+        if (!relId || idMap.has(relId)) continue
+
+        // At depth=1 rawVal is the expanded object — read title directly.
+        const title = typeof rawVal === 'object' ? rawVal.title : null
+        if (!title) continue
+
+        const destDoc = await findByTitle(destEnv, rel.collection, title).catch(() => null)
+        if (destDoc) {
+          idMap.set(relId, destDoc.id)
+          console.log(`  ✓ Matched ${rel.collection} by title "${title}" → ${destDoc.id}`)
+        } else {
+          console.warn(`  ⚠ No ${rel.collection} titled "${title}" in ${destEnv.label}. Relationship will be dropped.`)
+        }
+      }
+    }
+  }
+}
+
+// --- Media ---
 
 async function cloneMedia(doc, context) {
   const { destEnv, idMap, suffix } = context
@@ -179,127 +254,13 @@ async function cloneMedia(doc, context) {
   return created.id
 }
 
-async function processCollectionRelationships(collection, doc, context) {
-  const { sourceEnv, destEnv, idMap } = context
-  const rels = COLLECTION_RELATIONSHIPS[collection] ?? []
-
-  for (const rel of rels) {
-    // Array-of-items pattern (e.g. gallery_images[].image)
-    if (rel.arrayField) {
-      const items = doc[rel.arrayField]
-      if (!Array.isArray(items)) continue
-      for (const item of items) {
-        for (const fieldRel of rel.fields) {
-          await resolveFieldRel(item, fieldRel, context)
-        }
-      }
-      continue
-    }
-
-    const rawValue = doc[rel.field]
-    if (!rawValue) continue
-    if (rel.treatment === 'skip') continue
-
-    if (rel.treatment === 'match_slug') {
-      const ids = toArray(rawValue, rel.hasMany)
-      for (const rawId of ids) {
-        const relId = extractId(rawId)
-        if (!relId || idMap.has(relId)) continue
-
-        let sourceDoc
-        try { sourceDoc = await fetchDocument(sourceEnv, rel.collection, relId) } catch { continue }
-
-        const slug = sourceDoc?.slug
-        if (!slug) continue
-
-        const destDoc = await findBySlug(destEnv, rel.collection, slug).catch(() => null)
-        if (destDoc) {
-          idMap.set(relId, destDoc.id)
-          console.log(`  ✓ Matched ${rel.collection} by slug "${slug}" → ${destDoc.id}`)
-        } else {
-          console.warn(`  ⚠ No ${rel.collection} with slug "${slug}" in ${destEnv.label}. Relationship will be dropped.`)
-        }
-      }
-      continue
-    }
-
-    const ids = toArray(rawValue, rel.hasMany)
-    for (const rawId of ids) {
-      const relId = extractId(rawId)
-      if (relId) await cloneDocument(rel.collection, relId, context)
-    }
-  }
-}
-
-async function processLayout(collection, doc, context) {
-  const layoutField = LAYOUT_FIELDS[collection]
-  const layout = doc[layoutField]
-  if (!layout) return
-
-  const blocks = Array.isArray(layout) ? layout : [layout]
-  for (const block of blocks) {
-    if (block?.blockType) await processBlockRelationships(block, context)
-  }
-}
-
-async function processBlockRelationships(block, context) {
-  const blockRels = BLOCK_RELATIONSHIPS[block.blockType] ?? []
-
-  for (const rel of blockRels) {
-    if (rel.treatment === 'skip') continue
-
-    if (rel.arrayField) {
-      const items = block[rel.arrayField]
-      if (!Array.isArray(items)) continue
-      for (const item of items) {
-        for (const fieldRel of rel.fields) {
-          if (fieldRel.arrayField) {
-            // One level of nested arrays (e.g. services[].subServices[])
-            const subItems = item[fieldRel.arrayField]
-            if (Array.isArray(subItems)) {
-              for (const subItem of subItems) {
-                for (const subRel of fieldRel.fields) {
-                  await resolveFieldRel(subItem, subRel, context)
-                }
-              }
-            }
-          } else {
-            await resolveFieldRel(item, fieldRel, context)
-          }
-        }
-      }
-      continue
-    }
-
-    await resolveFieldRel(block, rel, context)
-  }
-}
-
-async function resolveFieldRel(obj, rel, context) {
-  if (rel.treatment === 'skip') return
-  const value = getNestedValue(obj, rel.field)
-  if (!value) return
-  const ids = toArray(value, rel.hasMany)
-  for (const rawId of ids) {
-    const relId = extractId(rawId)
-    if (relId) await cloneDocument(rel.collection, relId, context)
-  }
-}
+// --- Utilities ---
 
 function extractId(value) {
   if (!value) return null
   if (typeof value === 'string') return value
   if (typeof value === 'object' && value.id) return value.id
   return null
-}
-
-function toArray(value, hasMany) {
-  if (hasMany) return Array.isArray(value) ? value : [value]
-  return [value]
-}
-
-function getNestedValue(obj, dotPath) {
-  return dotPath.split('.').reduce((cur, key) => cur?.[key], obj)
 }
 
 export function stripSystemFields(doc) {

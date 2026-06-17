@@ -1,189 +1,25 @@
 /**
- * Defines which fields in each collection contain relationships,
- * what collection they point to, and how to handle them.
- *
- * treatment:
- *   'clone'      - recursively fetch and create in destination
- *   'match_slug' - find by slug in destination and reuse (don't copy the doc)
- *   'skip'       - ignore this relationship (prevents circular loops)
- *
- * hasMany: true  - field is an array of IDs
- * items: [...]   - nested array field: { arrayField, itemRelationships[] }
+ * Fingerprints used by the generic relationship walker to identify which
+ * collection an expanded Payload document belongs to.
+ * Checked in order — first match wins. Keep most-specific entries first.
  */
-
-// Top-level fields on documents (non-block relationships)
-export const COLLECTION_RELATIONSHIPS = {
-  pages: [
-    { field: 'page_template', collection: 'page_templates', treatment: 'clone' },
-    // 'sites' is handled separately — destination site ID is provided by the user at runtime
-    { field: 'categories', collection: 'categories', treatment: 'match_slug', hasMany: true },
-    { field: 'tags', collection: 'tags', treatment: 'match_slug', hasMany: true },
-    { field: 'featuredImage', collection: 'media', treatment: 'clone' },
-  ],
-  forms: [
-    { field: 'formIntegration', collection: 'form-integrations', treatment: 'clone' },
-    { field: 'secondFormIntegration', collection: 'form-integrations', treatment: 'clone' },
-    // 'redirect' points to pages — skip to prevent circular cloning
-    { field: 'redirect', collection: 'pages', treatment: 'skip' },
-  ],
-  page_templates: [
-    // layout blocks handled dynamically (same block walker as pages)
-  ],
-  reusable_blocks: [
-    // base_block handled dynamically (same block walker as pages)
-  ],
-  // Leaf collections — no nested relationships to follow
-  'form-integrations': [],
-  media: [],
-  locations: [],
-  categories: [],
-  tags: [],
-  sites: [],
-  galleries: [
-    {
-      arrayField: 'gallery_images',
-      fields: [
-        { field: 'image', collection: 'media', treatment: 'clone' },
-        { field: 'beforeImage', collection: 'media', treatment: 'clone' },
-      ],
-    },
-  ],
-}
+export const COLLECTION_FINGERPRINTS = [
+  { requiredFields: ['filename', 'mimeType'], collection: 'media' },
+  { requiredFields: ['base_block'],           collection: 'reusable_blocks' },
+  { requiredFields: ['gallery_images'],       collection: 'galleries' },
+  { requiredFields: ['crm'],                  collection: 'form-integrations' },
+  { requiredFields: ['submitButtonLabel'],    collection: 'forms' },
+  // page_templates have 'layout' but not 'sites'; pages have both (and are in SKIP_COLLECTIONS)
+  { requiredFields: ['layout'], forbiddenFields: ['sites'], collection: 'page_templates' },
+]
 
 /**
- * Relationship fields within each block type.
- *
- * path supports dot notation for nested fields: 'backgroundImage.media'
- * For array items (carousel slides, tabs, etc.), use items[] notation:
- *   { arrayField: 'items', fields: [{ field: 'image', collection: 'media', treatment: 'clone' }] }
+ * Collections to never follow. Relationships pointing here are left as
+ * the source ID (potential broken link) rather than cloned.
  */
-export const BLOCK_RELATIONSHIPS = {
-  formBlock: [
-    { field: 'form', collection: 'forms', treatment: 'clone' },
-    { field: 'backgroundImage.media', collection: 'media', treatment: 'clone' },
-  ],
-  reusableBlock: [
-    { field: 'selectedReusableBlock', collection: 'reusable_blocks', treatment: 'clone' },
-  ],
-  contentBlock: [
-    { field: 'selectedReusableBlock', collection: 'reusable_blocks', treatment: 'clone', hasMany: true },
-    { field: 'backgroundImage.media', collection: 'media', treatment: 'clone' },
-  ],
-  imageCallToActionBlock: [
-    { field: 'image', collection: 'media', treatment: 'clone' },
-  ],
-  contactMapBlock: [
-    { field: 'backgroundImage.media', collection: 'media', treatment: 'clone' },
-    { field: 'primaryLocation', collection: 'locations', treatment: 'clone' },
-    { field: 'secondaryLocation', collection: 'locations', treatment: 'clone' },
-    { field: 'tertiaryLocation', collection: 'locations', treatment: 'clone' },
-  ],
-  textWithImageBlock: [
-    { field: 'backgroundImage.media', collection: 'media', treatment: 'clone' },
-    // images array: items with an 'image' field
-    { arrayField: 'images', fields: [{ field: 'image', collection: 'media', treatment: 'clone' }] },
-  ],
-  columnCalloutsBlock: [
-    { field: 'backgroundImage.media', collection: 'media', treatment: 'clone' },
-    { arrayField: 'callouts', fields: [{ field: 'icon', collection: 'media', treatment: 'clone' }] },
-  ],
-  columnCTAsBlock: [
-    { field: 'backgroundImage.media', collection: 'media', treatment: 'clone' },
-    { arrayField: 'ctas', fields: [{ field: 'image', collection: 'media', treatment: 'clone' }] },
-  ],
-  columnCardsBlock: [
-    {
-      arrayField: 'cards',
-      fields: [
-        { field: 'image', collection: 'media', treatment: 'clone' },
-        { field: 'tags', collection: 'tags', treatment: 'match_slug', hasMany: true },
-      ],
-    },
-  ],
-  textWithCarouselBlock: [
-    {
-      arrayField: 'items',
-      fields: [{ field: 'image', collection: 'media', treatment: 'clone' }],
-    },
-  ],
-  textWithCarouselContentBlock: [
-    {
-      arrayField: 'items',
-      fields: [{ field: 'image', collection: 'media', treatment: 'clone' }],
-    },
-  ],
-  galleryCarouselBlock: [
-    { field: 'galleries', collection: 'galleries', treatment: 'clone' },
-  ],
-  cardGalleryBlock: [
-    { field: 'galleries', collection: 'galleries', treatment: 'clone', hasMany: true },
-  ],
-  tabbedGalleryBlock: [
-    { field: 'galleries', collection: 'galleries', treatment: 'clone', hasMany: true },
-  ],
-  beforeAndAfterGalleryBlock: [
-    { field: 'galleries', collection: 'galleries', treatment: 'clone', hasMany: true },
-  ],
-  tabbedBlock: [
-    {
-      arrayField: 'tabs',
-      fields: [{ field: 'image', collection: 'media', treatment: 'clone' }],
-    },
-  ],
-  teamMemberBlock: [
-    { field: 'teamMember', collection: 'team-members', treatment: 'skip' },
-  ],
-  reviewsCarouselBlock: [
-    { field: 'review', collection: 'reviews', treatment: 'skip' },
-    { field: 'thirdPartyReviewIntegration', collection: 'third-party-review-integrations', treatment: 'skip' },
-    {
-      arrayField: 'items',
-      fields: [{ field: 'image', collection: 'media', treatment: 'clone' }],
-    },
-  ],
-  featuredReviewBlock: [
-    { field: 'review', collection: 'reviews', treatment: 'skip' },
-  ],
-  serviceSelectorBlock: [
-    {
-      arrayField: 'services',
-      fields: [
-        { field: 'image', collection: 'media', treatment: 'clone' },
-        {
-          arrayField: 'subServices',
-          fields: [{ field: 'image', collection: 'media', treatment: 'clone' }],
-        },
-      ],
-    },
-  ],
-  videoCarouselBlock: [
-    {
-      arrayField: 'items',
-      fields: [
-        { field: 'thumbnail', collection: 'media', treatment: 'clone' },
-        { field: 'truspeedMedia', collection: 'media', treatment: 'clone' },
-      ],
-    },
-  ],
-  menuBlock: [
-    { field: 'menu', collection: 'menus', treatment: 'skip' },
-  ],
-  locationsBlock: [], // locations are tenant-specific config, skip
-  archiveBlock: [],
-  recentPostsBlock: [],
-  reviewListingBlock: [],
-  teamMemberListingBlock: [],
-  calloutBannerBlock: [],
-  countdownClockBlock: [],
-  eventsBlock: [],
-  mapBlock: [],
-  tableBlock: [],
-  codeBlock: [],
-  thirdPartyFormBlock: [],
-}
-
-// Collections whose IDs should never be followed (skip silently)
 export const SKIP_COLLECTIONS = new Set([
+  'pages',                          // circular — never follow page back-references
+  'sites',                          // handled separately via destSiteId prompt
   'reviews',
   'third-party-review-integrations',
   'menus',
@@ -193,5 +29,17 @@ export const SKIP_COLLECTIONS = new Set([
   'organizations',
 ])
 
-// System fields to strip from a document before creating it in destination
+/**
+ * Explicit relationship handling for fields that cannot be auto-detected
+ * by fingerprinting (categories and tags have no distinctive fields).
+ * Only populated for collections where generic walking falls short.
+ */
+export const COLLECTION_RELATIONSHIPS = {
+  pages: [
+    { field: 'categories', collection: 'categories', treatment: 'match_title', hasMany: true },
+    { field: 'tags',       collection: 'tags',       treatment: 'match_title', hasMany: true },
+  ],
+}
+
+// System fields stripped from every document before creating in destination
 export const SYSTEM_FIELDS = ['id', 'createdAt', 'updatedAt', 'tenant', '__v', 'globalType', '_status']

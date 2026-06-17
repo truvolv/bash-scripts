@@ -36,10 +36,18 @@ export const COLLECTION_RELATIONSHIPS = {
   'form-integrations': [],
   media: [],
   locations: [],
-  galleries: [],
   categories: [],
   tags: [],
   sites: [],
+  galleries: [
+    {
+      arrayField: 'gallery_images',
+      fields: [
+        { field: 'image', collection: 'media', treatment: 'clone' },
+        { field: 'beforeImage', collection: 'media', treatment: 'clone' },
+      ],
+    },
+  ],
 }
 
 /**

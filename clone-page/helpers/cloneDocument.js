@@ -184,6 +184,18 @@ async function processCollectionRelationships(collection, doc, context) {
   const rels = COLLECTION_RELATIONSHIPS[collection] ?? []
 
   for (const rel of rels) {
+    // Array-of-items pattern (e.g. gallery_images[].image)
+    if (rel.arrayField) {
+      const items = doc[rel.arrayField]
+      if (!Array.isArray(items)) continue
+      for (const item of items) {
+        for (const fieldRel of rel.fields) {
+          await resolveFieldRel(item, fieldRel, context)
+        }
+      }
+      continue
+    }
+
     const rawValue = doc[rel.field]
     if (!rawValue) continue
     if (rel.treatment === 'skip') continue

@@ -24,6 +24,9 @@ async function main() {
   const orgSlug = await input({ message: 'Organization slug:' })
   if (!orgSlug) { console.error('Organization slug is required.'); process.exit(1) }
 
+  const destSiteId = await input({ message: `Destination site ID (in ${destEnvKey}):` })
+  if (!destSiteId) { console.error('Destination site ID is required.'); process.exit(1) }
+
   const pageId = await input({ message: 'Page ID to clone:' })
   if (!pageId) { console.error('Page ID is required.'); process.exit(1) }
 
@@ -53,6 +56,7 @@ async function main() {
     suffix,
     idMap: new Map(), // sourceId → destId
     visited: new Set([pageId]), // mark page as visited to prevent circular loops
+    destSiteId,
   }
 
   // --- Recursively resolve and clone all relationships ---
@@ -61,11 +65,9 @@ async function main() {
   await processDocumentRelationships('pages', sourcePage, context)
 
   // --- Build final page document ---
-  // Strip system fields and slug/pathname (Payload regenerates those).
   const cleanedPage = stripSystemFields(sourcePage)
-  delete cleanedPage.slug
-  delete cleanedPage.pathname
-
+  // Preserve slug and pathname from source; override sites with the destination site.
+  cleanedPage.sites = [destSiteId]
   cleanedPage.title = `${cleanedPage.title} ${suffix}`
   const finalPage = remapIds(cleanedPage, context.idMap)
 

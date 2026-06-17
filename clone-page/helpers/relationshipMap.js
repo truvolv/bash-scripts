@@ -15,7 +15,7 @@
 export const COLLECTION_RELATIONSHIPS = {
   pages: [
     { field: 'page_template', collection: 'page_templates', treatment: 'clone' },
-    { field: 'sites', collection: 'sites', treatment: 'match_slug', hasMany: true },
+    // 'sites' is handled separately — destination site ID is provided by the user at runtime
     { field: 'categories', collection: 'categories', treatment: 'match_slug', hasMany: true },
     { field: 'tags', collection: 'tags', treatment: 'match_slug', hasMany: true },
     { field: 'featuredImage', collection: 'media', treatment: 'clone' },

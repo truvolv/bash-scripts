@@ -13,7 +13,7 @@ Copies a Payload CMS page from one TruSpeed environment to another (local ↔ QA
 | `media` | Downloaded and re-uploaded to destination |
 | `galleries` | Cloned |
 | `locations` | Cloned |
-| `sites` | Matched by slug (must already exist in destination) |
+| `sites` | Set to the destination site ID you provide at runtime |
 | `categories` / `tags` | Matched by slug (must already exist in destination) |
 | `reviews` / `menus` / `team-members` | Skipped (relationship dropped) |
 
@@ -49,11 +49,12 @@ You will be prompted for:
 1. Source environment (copy FROM)
 2. Destination environment (copy TO)
 3. Organization slug
-4. Page ID
+4. Destination site ID (the site in the destination env this page should belong to)
+5. Page ID
 
 ## Notes
 
-- The page's `slug` and `pathname` are stripped so Payload regenerates them from the title in the destination.
+- The page's `slug` and `pathname` are preserved as-is from the source.
 - Circular references (e.g. a form whose redirect points back to a page) are detected and skipped automatically.
 - If a relationship document is not found in the source, the relationship is silently dropped rather than failing the whole operation.
 - Block-level media (background images, carousel images, etc.) is cloned on a best-effort basis; if a download fails, that media reference is dropped.

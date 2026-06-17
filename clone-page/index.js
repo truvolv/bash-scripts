@@ -21,7 +21,7 @@ async function main() {
     choices: ENV_CHOICES.filter((e) => e !== sourceEnvKey).map((e) => ({ name: e, value: e })),
   })
 
-  const orgSlug = await input({ message: 'Organization slug:' })
+  const orgSlug = await input({ message: 'Organization slug (the org in both source and destination — e.g. "acme-corp"):' })
   if (!orgSlug) { console.error('Organization slug is required.'); process.exit(1) }
 
   const destSiteId = await input({ message: `Destination site ID (in ${destEnvKey}):` })

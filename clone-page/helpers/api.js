@@ -60,7 +60,8 @@ export async function uploadMedia(envConfig, mediaDoc) {
   const formData = new FormData()
   const blob = new Blob([buffer], { type: mediaDoc.mimeType || 'application/octet-stream' })
   formData.append('file', blob, mediaDoc.filename)
-  formData.append('alt', mediaDoc.alt || mediaDoc.filename || 'Imported media')
+  // Payload v3 expects non-file fields as a JSON string in a '_payload' part
+  formData.append('_payload', JSON.stringify({ alt: mediaDoc.alt || mediaDoc.filename || 'Imported media' }))
 
   const url = `${envConfig.baseUrl}/${envConfig.orgSlug}/api/media`
   const res = await fetch(url, {

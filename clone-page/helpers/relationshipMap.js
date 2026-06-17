@@ -105,16 +105,16 @@ export const BLOCK_RELATIONSHIPS = {
     },
   ],
   galleryCarouselBlock: [
-    { field: 'gallery', collection: 'galleries', treatment: 'clone' },
+    { field: 'galleries', collection: 'galleries', treatment: 'clone' },
   ],
   cardGalleryBlock: [
-    { field: 'gallery', collection: 'galleries', treatment: 'clone' },
+    { field: 'galleries', collection: 'galleries', treatment: 'clone', hasMany: true },
   ],
   tabbedGalleryBlock: [
-    { field: 'gallery', collection: 'galleries', treatment: 'clone' },
+    { field: 'galleries', collection: 'galleries', treatment: 'clone', hasMany: true },
   ],
   beforeAndAfterGalleryBlock: [
-    { field: 'gallery', collection: 'galleries', treatment: 'clone' },
+    { field: 'galleries', collection: 'galleries', treatment: 'clone', hasMany: true },
   ],
   tabbedBlock: [
     {

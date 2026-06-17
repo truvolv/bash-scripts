@@ -10,28 +10,29 @@ import { remapIds } from './helpers/remapIds.js'
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
 
 async function main() {
-  // --- Prompts ---
+  // --- FROM ---
   const sourceEnvKey = await select({
     message: 'Source environment (copy FROM):',
     choices: ENV_CHOICES.map((e) => ({ name: e, value: e })),
   })
 
+  const sourceOrgSlug = await input({ message: `Source organization slug (in ${sourceEnvKey}):` })
+  if (!sourceOrgSlug) { console.error('Source organization slug is required.'); process.exit(1) }
+
+  const pageId = await input({ message: 'Page ID to clone:' })
+  if (!pageId) { console.error('Page ID is required.'); process.exit(1) }
+
+  // --- TO ---
   const destEnvKey = await select({
     message: 'Destination environment (copy TO):',
     choices: ENV_CHOICES.filter((e) => e !== sourceEnvKey).map((e) => ({ name: e, value: e })),
   })
-
-  const sourceOrgSlug = await input({ message: `Source organization slug (in ${sourceEnvKey}):` })
-  if (!sourceOrgSlug) { console.error('Source organization slug is required.'); process.exit(1) }
 
   const destOrgSlug = await input({ message: `Destination organization slug (in ${destEnvKey}):` })
   if (!destOrgSlug) { console.error('Destination organization slug is required.'); process.exit(1) }
 
   const destSiteId = await input({ message: `Destination site ID (in ${destEnvKey}):` })
   if (!destSiteId) { console.error('Destination site ID is required.'); process.exit(1) }
-
-  const pageId = await input({ message: 'Page ID to clone:' })
-  if (!pageId) { console.error('Page ID is required.'); process.exit(1) }
 
   const sourceEnv = getEnvConfig(sourceEnvKey, sourceOrgSlug)
   const destEnv = getEnvConfig(destEnvKey, destOrgSlug)

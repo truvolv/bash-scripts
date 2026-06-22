@@ -1,6 +1,6 @@
-## 🧩 Repository Batch Updater Script Template
+## 🧩 Vercel Image Optimization — Batch Updater Script
 
-This script was written for batch updates across our member repos. [‼️TODO: Add description of updates here]
+This script was written to migrate `next.config.mjs` across all member apps from manually constructing image remote patterns to using the new `createNextConfig` helper from `@truvolv/orson-seelib`. The old pattern parsed `NEXT_PUBLIC_CMS_URL` and hardcoded the `cdn.truspeed.io` hostname directly in each repo; the new pattern delegates all of that to `createNextConfig`, keeping each app's config file minimal.
 
 ### 🚀 What It Does
 
@@ -26,7 +26,10 @@ This script was written for batch updates across our member repos. [‼️TODO: 
 5. **Iterates through all apps inside `apps/`**  
    For each app subdirectory, the script:
 
-   - ‼️TODO: Add description of script here
+   - Checks if `next.config.mjs` already uses `createNextConfig` — if so, skips the app (logs as "already updated", does not count toward batch).
+   - If the file matches the standard old pattern (contains `const cmsUrl`, `const nextConfig`, and the standard `rewrites`/`redirects` imports from `orson-seelib`), overwrites it with the new `createNextConfig` version.
+   - If the file has custom member edits that don't match the expected pattern, skips the overwrite and flags it in `manual-updates.csv` for manual review.
+   - If no `next.config.mjs` exists in the app, logs it as skipped.
 
 6. **Tracks progress and logs results**
 

@@ -148,12 +148,46 @@ while IFS= read -r repo_name || [[ -n "$repo_name" ]]; do
             continue
         fi
         
-        # Update next.config.mjs if it matches the standard old pattern (safe to auto-overwrite)
+        # Update next.config.mjs only if it exactly matches the known old template.
+        # Any deviation (extra imports, custom webpack, added remotePatterns, etc.) gets flagged for manual review.
         if [[ -f "$app_dir/next.config.mjs" ]]; then
-            if grep -q "from '@truvolv/orson-seelib/next.rewrites.mjs'" "$app_dir/next.config.mjs" && \
-               grep -q "from '@truvolv/orson-seelib/next.redirects.mjs'" "$app_dir/next.config.mjs" && \
-               grep -q "const nextConfig" "$app_dir/next.config.mjs" && \
-               grep -q "const cmsUrl" "$app_dir/next.config.mjs"; then
+            expected_content=$(cat << 'EXPECTED_EOF'
+/** @type {import('next').NextConfig} */
+
+import { rewrites } from '@truvolv/orson-seelib/next.rewrites.mjs';
+import { redirects } from '@truvolv/orson-seelib/next.redirects.mjs';
+
+const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || '';
+
+// Parse the URL
+const url = new URL(cmsUrl);
+
+const nextConfig = {
+    transpilePackages: ["@truvolv/orson-seelib"],
+    images: {
+        remotePatterns: [
+          {
+            protocol: url.protocol.replace(':', ''),
+            hostname: url.hostname,
+            port: url.port,
+            pathname: url.pathname + '/**',
+          },
+          {
+            protocol: 'https',
+            hostname: 'cdn.truspeed.io',
+            port: '',
+          }
+        ],
+      },
+      rewrites: rewrites,
+      redirects: redirects
+};
+
+export default nextConfig;
+EXPECTED_EOF
+)
+            actual_content=$(cat "$app_dir/next.config.mjs")
+            if [[ "$expected_content" == "$actual_content" ]]; then
                 echo "      Updating next.config.mjs in $app_name"
                 cat > "$app_dir/next.config.mjs" << 'EOF'
 /** @type {import('next').NextConfig} */

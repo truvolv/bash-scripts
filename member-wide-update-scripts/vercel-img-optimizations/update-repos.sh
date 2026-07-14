@@ -13,7 +13,7 @@ PR_LINKS_FILE="$SCRIPT_DIR/pr-links.txt"
 LOG_TRACKING_FILE="$SCRIPT_DIR/logs.txt"
 MANUAL_UPDATE_FILE="$SCRIPT_DIR/manual-updates.csv"
 
-BATCH_SIZE=${1:-5}
+BATCH_SIZE=${1:-400}
 echo -e "${YELLOW}Batch size set to: $BATCH_SIZE apps${NC}"
 
 echo "Repo,App,Status,Notes,PR Link" > "$LOG_FILE"
@@ -254,23 +254,23 @@ EOF
     #   Comment out "if ! git push; then" and uncomment "if ! git push origin "$branch_name"; then"
     # Direct push mode (bulk rollout): leave as-is — commits go straight to main.
     if [[ "$changes_made" == true ]]; then
-        # branch_name="chore/TRUSPD-724/migrate-next-config-img-opt"
+        branch_name="chore/TRUSPD-724/migrate-next-config-img-opt-35"
 
-        # echo "  Cleaning up git references..."
-        # git fetch --prune origin 2>/dev/null || true
+        echo "  Cleaning up git references..."
+        git fetch --prune origin 2>/dev/null || true
 
-        # echo "  Creating branch: $branch_name"
-        # if ! git checkout -b "$branch_name" 2>/dev/null; then
-        #     echo -e "${YELLOW}  Branch creation failed (likely already exists), discarding local changes${NC}"
-        #     echo "\"$repo_name\",\"branch-exists\",\"Branch creation failed, likely already exists - local changes discarded\"" >> "$ERROR_FILE"
+        echo "  Creating branch: $branch_name"
+        if ! git checkout -b "$branch_name" 2>/dev/null; then
+            echo -e "${YELLOW}  Branch creation failed (likely already exists), discarding local changes${NC}"
+            echo "\"$repo_name\",\"branch-exists\",\"Branch creation failed, likely already exists - local changes discarded\"" >> "$ERROR_FILE"
 
-        #     # Reset any local changes
-        #     git reset --hard HEAD
-        #     git clean -fd
+            # Reset any local changes
+            git reset --hard HEAD
+            git clean -fd
 
-        #     cd - > /dev/null
-        #     continue
-        # fi
+            cd - > /dev/null
+            continue
+        fi
 
         echo "  Committing changes..."
         git add .
@@ -283,8 +283,8 @@ EOF
 
         echo "  Pushing..."
         # PR mode: comment out the next line and uncomment the one below it
-        if ! git push; then
-        # if ! git push origin "$branch_name"; then
+        # if ! git push; then
+        if ! git push origin "$branch_name"; then
 
             echo -e "${RED}  Failed to push${NC}"
             echo "\"$repo_name\",\"push-failed\",\"Could not push changes\"" >> "$ERROR_FILE"
@@ -293,40 +293,40 @@ EOF
         fi
 
         # PR mode: uncomment this block to create a PR after pushing
-        # echo "  Creating PR..."
-        # pr_url=$(gh pr create \
-        #     --title "Migrate next.config.mjs to use createNextConfig from orson-seelib" \
-        #     --body "This PR migrates next.config.mjs from the manual image remote patterns setup to using the new createNextConfig helper from orson-seelib.
+        echo "  Creating PR..."
+        pr_url=$(gh pr create \
+            --title "Migrate next.config.mjs to use createNextConfig from orson-seelib" \
+            --body "This PR migrates next.config.mjs from the manual image remote patterns setup to using the new createNextConfig helper from orson-seelib.
 
-        #     - Removes manual URL parsing for NEXT_PUBLIC_CMS_URL and hardcoded cdn.truspeed.io hostname
-        #     - Replaces with createNextConfig which centralizes image optimization config in orson-seelib
+            - Removes manual URL parsing for NEXT_PUBLIC_CMS_URL and hardcoded cdn.truspeed.io hostname
+            - Replaces with createNextConfig which centralizes image optimization config in orson-seelib
 
-        #     Ticket: https://truvolv-company.monday.com/item/TRUSPD-724
+            Ticket: https://truvolv-company.monday.com/item/TRUSPD-724
 
-        #     This is an automated update across multiple repositories." \
-        #     --head "$branch_name" 2>&1)
+            This is an automated update across multiple repositories." \
+            --head "$branch_name" 2>&1)
 
-        # if [[ $? -eq 0 ]]; then
-        #     echo -e "${GREEN}  ✓ PR created successfully${NC}"
+        if [[ $? -eq 0 ]]; then
+            echo -e "${GREEN}  ✓ PR created successfully${NC}"
             
-        #     # Add to PR links file
-        #     echo "$repo_name: $pr_url" >> "$PR_LINKS_FILE"
+            # Add to PR links file
+            echo "$repo_name: $pr_url" >> "$PR_LINKS_FILE"
             
-        #     # Update the CSV with PR URL for successful app updates
-        #     temp_file=$(mktemp)
-        #     while IFS= read -r line; do
-        #         if [[ "$line" == *"\"$repo_name\","*"\",\"success\","* ]]; then
-        #             # Replace the empty PR link with the actual URL
-        #             echo "${line%,\"\"*},\"$pr_url\"" >> "$temp_file"
-        #         else
-        #             echo "$line" >> "$temp_file"
-        #         fi
-        #     done < "$LOG_FILE"
-        #     mv "$temp_file" "$LOG_FILE"
-        # else
-        #     echo -e "${RED}  Failed to create PR${NC}"
-        #     echo "\"$repo_name\",\"pr-failed\",\"Could not create pull request\"" >> "$ERROR_FILE"
-        # fi
+            # Update the CSV with PR URL for successful app updates
+            temp_file=$(mktemp)
+            while IFS= read -r line; do
+                if [[ "$line" == *"\"$repo_name\","*"\",\"success\","* ]]; then
+                    # Replace the empty PR link with the actual URL
+                    echo "${line%,\"\"*},\"$pr_url\"" >> "$temp_file"
+                else
+                    echo "$line" >> "$temp_file"
+                fi
+            done < "$LOG_FILE"
+            mv "$temp_file" "$LOG_FILE"
+        else
+            echo -e "${RED}  Failed to create PR${NC}"
+            echo "\"$repo_name\",\"pr-failed\",\"Could not create pull request\"" >> "$ERROR_FILE"
+        fi
     else
         echo -e "${YELLOW}  No changes needed${NC}"
         echo "\"$repo_name\",\"no-changes\",\"Repository processed but no changes were needed\"" >> "$ERROR_FILE"

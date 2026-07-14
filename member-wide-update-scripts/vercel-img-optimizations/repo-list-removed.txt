@@ -1,0 +1,15 @@
+# REMOVED
+
+truvolv/truquote
+truvolv/truquote-editor
+truvolv/truquote-eve-poc
+truvolv/truspeed-knowledge-base
+truvolv/truspeed
+truvolv/truspeed-v2
+truvolv/truspeed-workflows
+truvolv/orson-template
+truvolv/orson-seelib
+truvolv/terraform-modules
+truvolv/jackson-seelib
+truvolv/truvolv-embeds
+truvolv/turbo-template

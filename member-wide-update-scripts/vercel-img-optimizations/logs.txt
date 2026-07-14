@@ -1,0 +1,1007 @@
+
+Mass repo update started at Tue Jun 23 10:10:19 EDT 2026
+================================================
+================================================
+Mass repo update completed at Tue Jun 23 10:10:20 EDT 2026
+
+Mass repo update started at Tue Jun 23 10:12:32 EDT 2026
+================================================
+APP STATUS: truvolv/demo/baths-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/bryan-espey - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/carrie-testing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/carrie-testing-2 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/chace-test - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jun 23 10:12:39 EDT 2026
+
+Mass repo update started at Mon Jul  6 14:33:07 EDT 2026
+================================================
+APP STATUS: truvolv/demo/dani-testing-ste - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/demo-testing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/eden-test-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/eden-testing - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Mon Jul  6 14:33:10 EDT 2026
+
+Mass repo update started at Mon Jul  6 15:01:36 EDT 2026
+================================================
+APP STATUS: truvolv/demo/dani-testing-ste - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/demo-testing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/eden-test-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/eden-testing - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Mon Jul  6 15:01:42 EDT 2026
+
+Mass repo update started at Mon Jul  6 15:34:50 EDT 2026
+================================================
+APP STATUS: truvolv/demo/elliot-testing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/elliot-testing-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/fewa-test-demo-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/garage-door-demo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/hadi-test - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Mon Jul  6 15:34:56 EDT 2026
+
+Mass repo update started at Mon Jul  6 16:08:40 EDT 2026
+================================================
+APP STATUS: truvolv/demo/jacuzzi-demo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/main-caleb-con - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/power-washing-demo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/site-builder-toolkit - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/sweepstakes-demo - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Mon Jul  6 16:08:46 EDT 2026
+
+Mass repo update started at Tue Jul  7 09:21:53 EDT 2026
+================================================
+APP STATUS: truvolv/demo/test-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/test-lp-2 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v1 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v2 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v3 - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 09:22:00 EDT 2026
+
+Mass repo update started at Tue Jul  7 09:22:22 EDT 2026
+================================================
+APP STATUS: truvolv/demo/test-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/test-lp-2 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v1 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v2 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v3 - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 09:22:29 EDT 2026
+
+Mass repo update started at Tue Jul  7 09:22:47 EDT 2026
+================================================
+APP STATUS: truvolv/demo/test-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/test-lp-2 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v1 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v2 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v3 - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 09:22:53 EDT 2026
+
+Mass repo update started at Tue Jul  7 10:14:58 EDT 2026
+================================================
+APP STATUS: truvolv/demo/v4 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/v5 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/demo/zoobia-test-site - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 10:15:05 EDT 2026
+
+Mass repo update started at Tue Jul  7 10:45:24 EDT 2026
+================================================
+================================================
+Mass repo update completed at Tue Jul  7 10:45:25 EDT 2026
+
+Mass repo update started at Tue Jul  7 12:07:18 EDT 2026
+================================================
+APP STATUS: truvolv/truvolv-corporate/truvolv-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 12:07:28 EDT 2026
+
+Mass repo update started at Tue Jul  7 12:10:33 EDT 2026
+================================================
+APP STATUS: truvolv/truvolv-corporate/truvolv-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 12:10:42 EDT 2026
+
+Mass repo update started at Tue Jul  7 12:11:23 EDT 2026
+================================================
+================================================
+Mass repo update completed at Tue Jul  7 12:11:23 EDT 2026
+
+Mass repo update started at Tue Jul  7 12:11:40 EDT 2026
+================================================
+================================================
+Mass repo update completed at Tue Jul  7 12:11:44 EDT 2026
+
+Mass repo update started at Tue Jul  7 14:06:16 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-004-qaen-lightning-tes/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/quality-home-services/lp-solar - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/quality-home-services/qhs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/owens-corning-bfs/basement-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/owens-corning-bfs/oc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/one-day-bath-solutions/odbs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-404-page-logging/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/safe-harbor-exteriors/micro-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/safe-harbor-exteriors/micro-wd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/safe-harbor-exteriors/sh-ext-micro-siding - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 14:06:56 EDT 2026
+
+Mass repo update started at Tue Jul  7 14:52:27 EDT 2026
+================================================
+APP STATUS: truvolv/safe-harbor-exteriors/she-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ez-pro-express/ez-lp-senior-bath - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ez-pro-express/ez-micro-bathrooms - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ez-pro-express/main-ezpro-express - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/firm-foundation-construction/ffc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/todco-roofing/todco-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bytown-bath/bb-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/customfit-baths/customfit-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/my-viva-home/lp-mvh - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/home-pros-central-pa/main-home-pro-pa - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 14:53:12 EDT 2026
+
+Mass repo update started at Tue Jul  7 15:32:10 EDT 2026
+================================================
+APP STATUS: truvolv/safe-harbor-exteriors/she-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/luxury-bath-njpa/lux-bath-njpa - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/a-a-services/aa-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-837-hero-content-vertic/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-972-extension-paths-to-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/lp-welcome - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/ss-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/ob-lp-pergolas - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/od-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/weatherwiz-gutters/wwg-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 15:33:10 EDT 2026
+
+Mass repo update started at Tue Jul  7 15:34:19 EDT 2026
+================================================
+APP STATUS: truvolv/safe-harbor-exteriors/she-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/luxury-bath-njpa/lux-bath-njpa - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/a-a-services/aa-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-837-hero-content-vertic/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-972-extension-paths-to-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/lp-welcome - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/ss-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/ob-lp-pergolas - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/od-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/weatherwiz-gutters/wwg-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/de-custom-floors/decf-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/schulte-construction/main-schulte - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pemberton-appliance/pac-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/abby-home/ah-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-id-ut-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-mn-ne - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-mt - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-nd-sd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mn-ne-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mt-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-nd-sd-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-portland-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/lp-r360-roofer - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/r-360 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/cabinet-refacing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/lkb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/erdmann-outdoor-living/outdoor-living-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-764-new-footer/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-of-california - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-atl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-az-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-de-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-fl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-houston-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-nc-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-or-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-sea-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-stl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/main-jbr-greenville - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-961-lead-perfection-gs-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/three-d-kitchen/three-d-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 15:35:57 EDT 2026
+
+Mass repo update started at Tue Jul  7 15:38:14 EDT 2026
+================================================
+APP STATUS: truvolv/safe-harbor-exteriors/she-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/luxury-bath-njpa/lux-bath-njpa - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/a-a-services/aa-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-837-hero-content-vertic/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-972-extension-paths-to-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/lp-welcome - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/ss-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/ob-lp-pergolas - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/od-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/weatherwiz-gutters/wwg-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/de-custom-floors/decf-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/schulte-construction/main-schulte - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pemberton-appliance/pac-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/abby-home/ah-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-id-ut-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-mn-ne - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-mt - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-nd-sd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mn-ne-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mt-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-nd-sd-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-portland-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/lp-r360-roofer - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/r-360 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/cabinet-refacing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/lkb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/erdmann-outdoor-living/outdoor-living-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-764-new-footer/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-of-california - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-atl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-az-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-de-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-fl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-houston-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-nc-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-or-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-sea-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-stl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/main-jbr-greenville - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-961-lead-perfection-gs-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/three-d-kitchen/three-d-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 15:38:43 EDT 2026
+
+Mass repo update started at Tue Jul  7 15:39:59 EDT 2026
+================================================
+APP STATUS: truvolv/safe-harbor-exteriors/she-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/luxury-bath-njpa/lux-bath-njpa - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/a-a-services/aa-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-837-hero-content-vertic/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-972-extension-paths-to-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/lp-welcome - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/ss-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/ob-lp-pergolas - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/od-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/weatherwiz-gutters/wwg-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/de-custom-floors/decf-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/schulte-construction/main-schulte - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pemberton-appliance/pac-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/abby-home/ah-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-id-ut-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-mn-ne - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-mt - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-nd-sd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mn-ne-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mt-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-nd-sd-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-portland-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/lp-r360-roofer - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/r-360 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/cabinet-refacing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/lkb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/erdmann-outdoor-living/outdoor-living-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-764-new-footer/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-of-california - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-atl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-az-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-de-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-fl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-houston-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-nc-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-or-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-sea-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-stl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/main-jbr-greenville - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-961-lead-perfection-gs-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/three-d-kitchen/three-d-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 15:41:32 EDT 2026
+
+Mass repo update started at Tue Jul  7 15:41:54 EDT 2026
+================================================
+APP STATUS: truvolv/safe-harbor-exteriors/she-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/luxury-bath-njpa/lux-bath-njpa - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/a-a-services/aa-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-837-hero-content-vertic/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-972-extension-paths-to-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/lp-welcome - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/ss-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/ob-lp-pergolas - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/od-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/weatherwiz-gutters/wwg-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/de-custom-floors/decf-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/schulte-construction/main-schulte - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pemberton-appliance/pac-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/abby-home/ah-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-id-ut-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-mn-ne - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-mt - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-nd-sd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mn-ne-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mt-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-nd-sd-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-portland-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/lp-r360-roofer - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/r-360 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/cabinet-refacing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/lkb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/erdmann-outdoor-living/outdoor-living-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-764-new-footer/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-of-california - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-atl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-az-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-de-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-fl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-houston-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-nc-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-or-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-sea-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-stl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/main-jbr-greenville - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-961-lead-perfection-gs-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/three-d-kitchen/three-d-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 15:43:22 EDT 2026
+
+Mass repo update started at Tue Jul  7 15:45:10 EDT 2026
+================================================
+APP STATUS: truvolv/safe-harbor-exteriors/she-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/luxury-bath-njpa/lux-bath-njpa - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/a-a-services/aa-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-837-hero-content-vertic/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-972-extension-paths-to-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/lp-welcome - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southern-showers/ss-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/ob-lp-pergolas - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outback-deck/od-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/weatherwiz-gutters/wwg-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/de-custom-floors/decf-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/schulte-construction/main-schulte - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pemberton-appliance/pac-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/abby-home/ah-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-id-ut-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-mn-ne - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-siding-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-id-ut - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-mt - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-nd-sd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-lp-windows-or - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mn-ne-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-mt-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-nd-sd-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-home-improvement-co/yhi-portland-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/lp-r360-roofer - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-360/r-360 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/cabinet-refacing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-kitchen-bath/lkb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/erdmann-outdoor-living/outdoor-living-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-764-new-footer/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/bathwraps-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-of-california - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbr-promo - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-atl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-az-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-de-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-fl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-houston-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-nc-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-or-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-sea-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/jbrx-stl-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/main-jbr-greenville - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-961-lead-perfection-gs-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/three-d-kitchen/three-d-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul  7 15:45:41 EDT 2026
+
+Mass repo update started at Thu Jul  9 10:41:12 EDT 2026
+================================================
+APP STATUS: truvolv/aspire-services/as-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/paramount-builders/pb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/paramount-builders/pb-module-custom-form - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jim-woods-roofing/jim-woods-roofing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bullseye-baths/bullseye-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/t-and-c-reno/main-t-and-c-reno - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/t-and-c-reno/tacr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/town-and-country-roofing/tacr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/expert-roofing-services/ers-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/schantz-home-improvement/shi-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/windows-doors-carolinas/wdc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/peg-sur/lp-peg-sur - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/my-shower-today/my-shower-today-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/c3-construction/main-c3 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/signature-home-services/lp-kitchen-shs - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/signature-home-services/lp-roofing-shs - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/signature-home-services/lp-siding-shs - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/signature-home-services/shs-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/signature-home-services/shs-roofing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/struxure-utah/struxure-utah-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/hurricane-window-specialists/hws-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/stoneluxe-coatings/main-slc - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outdoor-altimate/altimate-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outdoor-altimate/lp-outdoor - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outdoor-altimate/micro-screens - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/outdoor-altimate/micro-struxure - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-274-no-load-hero-video-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/sunbrella/cf-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/sunbrella/gp-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/sunbrella/ww-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cal-energy-consultant/cee-lp-metal-roofing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cal-energy-consultant/cee-lp-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cal-energy-consultant/cee-lp-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cal-energy-consultant/cee-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cal-energy-consultant/lp-schedule-an-assessment - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cal-energy-consultant/rinky-dink - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-543-highimpactheroformo/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-000-qa-env-tweaks/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/california-bathrooms/cb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/men-with-tools/mwt-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/deck-and-drive/d-a-d - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/deck-and-drive/dnd-lp-pavers - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/deck-and-drive/lp-dnd-drive - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/midwest-home-solutions/mhs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/midwest-home-solutions/redirect-midwest-egh - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/united-construction-solutions/ucs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/window-place-plus/lp-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/window-place-plus/lp-windows-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/window-place-plus/twpp-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Thu Jul  9 10:44:12 EDT 2026
+
+Mass repo update started at Thu Jul  9 15:04:48 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru-c27f3afe27d2d8/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/rjw-exteriors/main-rjw - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/rjw-exteriors/rjw-exteriors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cyprus-air/ca-module-multistep-form - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cyprus-air/cyprus-air-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cyprus-air/cyprus-air-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cyprus-air/redirect-only-cyprus-air - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cyprus-air/redirect-only-gas-fireplaces - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/refloor/refloor-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/top-tier-kitchen/tt-kitchen - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/eden-test-org-3-5b90684cd1aaca/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/temp-payload-org/payload-audit - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/timeproof-usa/tp-usa-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/mcgill-plumbing/mcgp-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/mcgill-plumbing/water-treatment - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/always-green-turf/always-g-t - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/designed-hi/designed-home-improvement - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/nutech-mold-water/nmw-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-12345-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cardinal-baths/cb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ml-fixes/main-ml-fixes - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ohp/ohp-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ohp/twist-spout - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/wonder-windows-showers-baths/wwsb-lp-windows-doors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/wonder-windows-showers-baths/wwsb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/wonder-windows-showers-baths/wwsb-micro-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/american-home-design/ahd-jobs - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/american-home-design/ahd-lp-window-replacement - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/american-home-design/ahd-micro-doors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/american-home-design/ahd-micro-outdoor - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/american-home-design/ahd-micro-rainsoft - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/american-home-design/ahd-micro-tennessee-bathrooms - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/american-home-design/ahd-micro-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/american-home-design/rs-knox - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/american-home-design/tnbaths-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/premier-services-nj/psnj-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/1364-services/1364-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/premier-home-services/phs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/yancey-home-improvements/yancey-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/yancey-home-improvements/yancey-main-new - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/gutter-helmet-by-around-the-house/awnings-shades - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/gutter-helmet-by-around-the-house/gutter-h-redirect - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/gutter-helmet-by-around-the-house/lp-gutters - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/gutter-helmet-by-around-the-house/main-gutter-helmet - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bluebird-windows-doors/main-bbwd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/crawford-farms-concrete-stone/cfcs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/continental-siding/cs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/calm-water-and-bath/cwb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/d5-capital-holdings/d5-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/rosewood-home-remodeling/main-rhr - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Thu Jul  9 15:08:11 EDT 2026
+
+Mass repo update started at Thu Jul  9 15:29:06 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru-c27f3afe27d2d8/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/eden-test-org-3-5b90684cd1aaca/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-12345-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/blind-and-shutter-spot/calculator - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/clean-cut-roofing-and-siding/ccrs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/clean-cut-roofing-and-siding/roof-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/clean-cut-roofing-and-siding/slp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/clean-cut-roofing-and-siding/win-doors-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/clemens-home-solutions/main-chs - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/heins-contracting/hc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/heins-contracting/hc-micro-roofing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/heins-contracting/hc-micro-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/heins-contracting/hc-micro-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/midwest-construction-remodeling/mwcr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/main-rsb/rainbow-shower-and-bath - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/one-and-done-bath-solutions/fw-in-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/one-and-done-bath-solutions/jv-fl-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/one-and-done-bath-solutions/odbs-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/one-and-done-bath-solutions/odbs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cleanedge-cabinetry/main-cleanedge-cabinetry - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-home-authority/cabinet-authority - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-home-authority/coatings-authority - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-home-authority/design-by-studio-a - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-home-authority/design-by-studio-a-365 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-home-authority/home-authority - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-home-authority/lp-authority-companies - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-home-authority/lp-super-dougie-adventures - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-home-authority/lp-test-ha - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cabinet-experts/cabinet-experts - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/paulson-monuments/paulson-monuments - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/legendary-calrep/lcwd-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roof-masters/main-roof-masters - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/waterworks-of-delmarva/main-wwd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bathing-solutions/bs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/nimmo-roofing-and-construction/nimmo-rc - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/luxury-bath-tampa/luxury-tampa-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southwest-style/lp-sw-style - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/southwest-style/southwest-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/gutter-cover-kc/gckc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/usa-showers/usa-s - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ezpro-kitchen-and-bath/ekb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/spokane-stone-creations/ssc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/empire-home-remodeling/main-ehr - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/empire-home-remodeling/windows-ehr - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/nessler-and-associates/nessler-aa - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/haven-bath-ca/hb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/haven-bath-ca/lp-haven-bath - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/everest-home-improvement/ehi-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/armor-guard/armorguard-exteriors-gutters-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/armor-guard/armorguard-exteriors-screens-micro - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Thu Jul  9 15:32:14 EDT 2026
+
+Mass repo update started at Fri Jul 10 13:25:39 EDT 2026
+================================================
+
+Mass repo update started at Fri Jul 10 13:27:22 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-966-contact-map-embed-o/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jacuzzi/main-jbq - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/peg-sur/ps-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-681-provision-vercel-bl/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-814-xslx-validation/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-937-adjustable-block-pa/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/safe-harbor-exteriors/she-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-954-i360-lightning-api-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-932-job-nimbus-reverse-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Fri Jul 10 13:29:48 EDT 2026
+
+Mass repo update started at Fri Jul 10 14:22:42 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-001-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-954-i360-lightning-api-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-sorting-block-optio/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-274-no-load-hero-video-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-000-qa-env-tweaks/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru-c27f3afe27d2d8/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/eden-test-org-3-5b90684cd1aaca/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-12345-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kurtis-kitchen-and-bath/kkb-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Fri Jul 10 14:24:25 EDT 2026
+
+Mass repo update started at Fri Jul 10 14:27:33 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-001-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-954-i360-lightning-api-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-sorting-block-optio/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-274-no-load-hero-video-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-000-qa-env-tweaks/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru-c27f3afe27d2d8/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/eden-test-org-3-5b90684cd1aaca/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-12345-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kurtis-kitchen-and-bath/kkb-main - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Fri Jul 10 14:29:03 EDT 2026
+
+Mass repo update started at Fri Jul 10 14:32:48 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-001-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-954-i360-lightning-api-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-sorting-block-optio/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-274-no-load-hero-video-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-000-qa-env-tweaks/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru-c27f3afe27d2d8/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/eden-test-org-3-5b90684cd1aaca/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-12345-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-fitter-inland-nw/bath-fitter-in-nw - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-fitter-inland-nw/heavyset-br-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-fitter-inland-nw/micro-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/savannah-cabinetry/main-savannah - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/okeefe-and-flanagan-electric/electrical-services-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/okeefe-and-flanagan-electric/micro-generators - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/okeefe-and-flanagan-electric/micro-mini-splits - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/okeefe-and-flanagan-electric/ok-f-e - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/hutchco-home-and-bath/hchb-lp-gsc - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/hutchco-home-and-bath/hchb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/everlasting-windows-and-doors/elwd-micro-baths - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Fri Jul 10 14:35:03 EDT 2026
+
+Mass repo update started at Fri Jul 10 14:45:39 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-001-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-954-i360-lightning-api-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-sorting-block-optio/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-274-no-load-hero-video-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-000-qa-env-tweaks/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru-c27f3afe27d2d8/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/eden-test-org-3-5b90684cd1aaca/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-12345-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/everlasting-windows-and-doors/main-elwd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/everlasting-windows-and-doors/micro-windows-doors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/south-florida-windows-doors/main-sfwd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/gerrys-roofing/gerry-rs - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/complete-exteriors-colorado/main-cec - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/window-perfections/altoona-wp-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/window-perfections/wp-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kingspan/micro-light-air - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kingspan/micro-pac - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ljstone/ljstone - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ljstone/micro-baths - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Fri Jul 10 14:47:44 EDT 2026
+
+Mass repo update started at Fri Jul 10 16:59:47 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-001-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-954-i360-lightning-api-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-sorting-block-optio/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-274-no-load-hero-video-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-000-qa-env-tweaks/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru-c27f3afe27d2d8/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/eden-test-org-3-5b90684cd1aaca/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-12345-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ljstone/micro-facebook - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ljstone/micro-gannett - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/walshs-remodeling/wr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/rose-remodeling/rr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/renew-it-by-kurtis/renewit-by-k - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/endless-poxybilities/ep-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lyfe-ocs/lyfe-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/exterior-pros/ext-pros - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/surbers-usa/surbers-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lehigh-gap-exteriors/lge-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-experts/hub-bath-cabinets - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Fri Jul 10 17:02:20 EDT 2026
+
+Mass repo update started at Fri Jul 10 17:04:39 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-001-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-954-i360-lightning-api-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-sorting-block-optio/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-274-no-load-hero-video-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-000-qa-env-tweaks/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru-c27f3afe27d2d8/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/eden-test-org-3-5b90684cd1aaca/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-12345-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-experts/main-bath-experts - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cornerstone-construction/cc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cornerstone-construction/radio-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cornerstone-construction/roofing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cornerstone-construction/siding-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/mccoy-roofing/main-mccoy - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/brackets-custom-window-coverings/bcwc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/prairie-exteriors-painting/pep-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cleancut-bath/lp-cc-bath - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/mako-shower-and-bath/main-mako-sab - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kris-konstruction-/kk-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kris-konstruction-/kk-micro-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kris-konstruction-/kk-micro-kitchens - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kris-konstruction-/kk-micro-roofing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kris-konstruction-/kkusa-redirect - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/dagmar-pros/main-dagmar - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cyclone-contracting/cyc-con-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/love-your-bath/lyb-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/nailed-it-home-solutions/nihs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/sir-home/main-shi - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/purella/p-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/calbear-construction/cb-construction - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/struxure-scottsdale/strux-scott-red - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/struxure-scottsdale/struxure-scd - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/stressless-remodeling/go-stressless - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/stressless-remodeling/sr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/aqua-shield-nm/main-aqua-shield - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/k-h-home-solutions/k-h-home-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/k-h-home-solutions/kh-lp-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/k-h-home-solutions/lp-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/durante-he/durante-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/durante-he/main-durante-home-exteriors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/durante-he/micro-bathrooms - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/durante-he/micro-doors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/durante-he/micro-outdoor-living - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/durante-he/micro-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/durante-he/micro-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pro-home-1/ph1-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pro-home-1/roofing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pro-home-1/siding-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pro-home-1/windows-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/willis-roofing/w-roofing-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/willis-roofing/wr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/struxure-atl/struxure-atl - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/coastal-bath-co/bb-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/coastal-bath-co/bmb-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/coastal-bath-co/cbc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/aspen-glass/ag-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/rainsoft-ne-iowa/rni-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/rainsoft-great-lakes/main-great-lakes-wt - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/mode-renovation/mode-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/asp-superhome/main-asp-sh - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jbr-greenville/jbrg-micro-ashvillenc - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jbr-greenville/jbrg-micro-columbiasc - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jbr-greenville/jbrg-micro-greenvilesc - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jbr-greenville/main-jbr-greenville - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/tailor-made-windows-inc/main-t-m-w-i - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/struxure-northshore/always-g-t - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/struxure-northshore/struxure-ns - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/five-star-homes/five-star-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/dwight-and-sons/main-dwight-and-sons - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/dwight-and-sons/micro-dwight-and-sons-roofing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/dwight-and-sons/microroofing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/homefix/doors-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/homefix/gutters-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/homefix/homefix-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/homefix/roofing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/homefix/siding-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/homefix/solar-shingles-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/homefix/windows-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/philadelphia-ge/pge-comfort - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jbr-by-capital/jbr-micro-new-england - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jbr-by-capital/main-jbr-capital - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/home-value-renovation/main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ohio-state-windows/osw-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/hegg-windows-doors/h-w-d - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/direct-remodels/main-dr - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/black-rock-roofing/brr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/main-bath-remodel-by-c/brc-micro-ct - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/main-bath-remodel-by-c/main-bath-remodel-by-c - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/asp-windows/main-asp-w - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/leap/leap-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/yrp/yrp-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/florida-energy-water-air-pure/fewa-pure - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/florida-energy-water-air-pure/lp-fewa-pentair - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/florida-energy-water-air-pure/lp-fewa-pentair-new - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/florida-energy-water-air-pure/main-fewa - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/florida-energy-water-air-pure/micro-water-treat - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/main-abc-jacuzzi/abcnd-micro-bath - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/main-abc-jacuzzi/abcnd-micro-roof - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/main-abc-jacuzzi/abcnd-micro-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/main-abc-jacuzzi/abcnd-micro-window - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ltg-coatings/ltgc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/erdmann-exteriors/main-erdmann-ext - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/207-roofers/main-207-roofers - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bathroom-pros-nj/bpnj-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/on-track-doors/otd-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-works-mi/bwmi-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-works-mi/lp-go-bath-works-mi - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/dgd/dgd-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/home-pro-mi/hpmi-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/innovative-exteriors/main-innovative-exteriors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/siding-and-windows-wizards/siding-wizards-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jjs-custom/barndominium - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jjs-custom/barndominiums-2 - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jjs-custom/jj-custom-builders - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/jjs-custom/jjs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/trim-a-seal/micro-floor-coating - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/trim-a-seal/tas-micro-gutters - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/carolina-home-remodeling/chr-bathroom-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/carolina-home-remodeling/chr-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/carolina-home-remodeling/chr-windows-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/inside-out-roofing/inside-out-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/coors-remodeling/coors-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/coors-remodeling/heavenly-decks-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pond-roofing/pond-roofing-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/frey/jjs-custom - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/illumination-window-door/illum-new - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/illumination-window-door/illumination-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/k-p-remodeling/kp-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/fba/floors-by-angie-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/solar-shield-inc/main-site-ssi - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/solatube/dallas-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/solatube/los-angeles-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/solatube/orange-county-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/solatube/phoenix-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/solatube/san-diego-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/all-seasons-windows-and-doors/asr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/all-seasons-windows-and-doors/aswd-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/weatherwize-lhp/main-weatherwize-lhp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bam-showers/bam-showers - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/k-h-painting-pros/kh-painting-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/comfort-kb/main-comfort-kitchen-and-bath - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/total-bath-systems/main-site-tbs - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/quality-moving-services/quality-moving-services - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/lifetime-solutions/ls-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ridgeline-floors/rf-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/gutter-guards-direct/gutter-guards-direct-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/sea-glass-jax/sea-glass-jax-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ocala-baths-fl/ocala-baths - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/wealthy-contractor/twc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/privacy-fence-company/privacy-fencing-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/allmaster-home-services/ahs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ramco/main-r-h-i - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ramco/micro-redirect - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ramco/micro-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/ramco/micro-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/nulook-home-design/nu-look-brand-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/nulook-home-design/nu-look-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/nulook-home-design/nulook-roofing-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/nulook-home-design/nulook-siding-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/nulook-home-design/nulook-windows-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/mattsson-roofing/mattsson-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/mjf-home-upgrades/mjf-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/integrity-construction-consulting/icc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/covered-exteriors/covered-exteriors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bel-sd/bell-shower-door-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/galla-rini-roofing/gr-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/integrity-home-pro/ihp-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/for-energy/for-energy - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/360-windows-and-doors/360-windows-and-doors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/b-w-glass/bandw-glass - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/alco-products/main-alco - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/all-american-roofing/aar-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/trident-bath/trident-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/legacy-cc/lcc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/burr-custom-exteriors/bce-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/denver-glass-interiors/dgi-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/precision-roofing/precision-roofing-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/contract-exteriors/ce-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-america/ba-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-america/lp-ba - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-bath-boys/tbb-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/sweetwater-home-services/main-site-sms - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pinnacle-exteriors/pe-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/roofing-store/roofing-store-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/hunterdon/hrswc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/white-cloud-cc/wccc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/k-c/main-kingdom-contracting - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/finish-line-strategies/fls-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/aspen-windows/aspen-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/dreamhome-remodeling-ct/dhrct-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/baths-for-the-brave/bftb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/rgs-exteriors/rgs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/theut-glass/theut-glass - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/spancraft/spancraft-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/your-select-home/ysh-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/sullivans-bath-and-window/sbw-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/blue-ridge-bath/brb-bathroom-lp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/blue-ridge-bath/brb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/long-home-products/lhp-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/install-services/install-serv - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cypress-bath/cb-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bird-dog-construction/main-bdc - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/style-craft-remodeling-/scr-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/twin-cities-jacuzzi/main-tcj - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/twin-cities-jacuzzi/main-tcjacuzzi - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kitchens-today/kt-main-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/brian-gottlieb/main-brian-gottlieb - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/hydrotek-plumbing/main-hp - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/destination-motivation/dm-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/refined-spaces/rs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/vista-homes-utah/vista-homes-utah - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/express-bath/exp-bath - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/a-plus-pro-services/a-plus-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/americas-best-windows-and-doors/abwd-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-fitter-tucson/bft-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bath-fitter-tucson/bft-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/scc-pros/scc-pros-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/scc-pros/swhi-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/swis-pros/main-swis-pros - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/sharper-impressions-painting/sharper-impr - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/capital-construction/ccc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/capital-construction/micro-outdoor - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kubala-home-improvement/fh-micro - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kubala-home-improvement/main-kubala - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bee-windows/bee-windows-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bee-windows/micro-bathrooms - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bee-windows/micro-doors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bee-windows/micro-patio-enclosures - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bee-windows/micro-siding - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/bee-windows/micro-windows - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/altruistic-advisory/main-a-a - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/floortek/floortek-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/floortek/ofc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/floortek/ox-floors-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/mkd-kitchen-and-bath/mkd-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/mod-bath/modbath-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/carole-frederick/main-cf - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/carole-frederick/window-treatments - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/cms/pfc-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/uat/august-testing - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/uat/v2-testing-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/uat/visual-regression - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/five-star-contracting/main-fsc - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/denver-pergolas/denver-pergolas - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/denver-pergolas/re-denver-pergolas - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/denver-pergolas/redirect-denper - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/floorology/floorology - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/kitchen-restyled/kitchen-restyled - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-board-store/tbs-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-board-store/tbs-micro-bath - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/the-board-store/tbs-micro-windows-doors - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/universal-windows-of-manchester/uwm-main - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pahlisch-select-2b3bf0d45e7a2f/your-select-home - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pahlisch-select-2b3bf0d45e7a2f/​pahlisch-select - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Fri Jul 10 17:21:20 EDT 2026
+
+Mass repo update started at Tue Jul 14 13:09:41 EDT 2026
+================================================
+APP STATUS: truvolv/qa-truspd-965-email-validation/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-952-acculynx-v2-integra/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/stressless-remodeling/gran-redirect - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/stressless-remodeling/rubber-redirect - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-954-i360-lightning-api-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-001-sorting-block-optio/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-274-no-load-hero-video-/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-000-qa-env-tweaks/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-301-find-feature-in-tru-c27f3afe27d2d8/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/eden-test-org-3-5b90684cd1aaca/eden - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/qa-truspd-12345-qa-env-test/qa-env-site - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pahlisch-select-2b3bf0d45e7a2f/your-select-home - success - next.config.mjs updated to use createNextConfig
+APP STATUS: truvolv/pahlisch-select-2b3bf0d45e7a2f/​pahlisch-select - success - next.config.mjs updated to use createNextConfig
+================================================
+Mass repo update completed at Tue Jul 14 13:15:29 EDT 2026

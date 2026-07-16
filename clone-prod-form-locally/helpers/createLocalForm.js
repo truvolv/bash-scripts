@@ -1,4 +1,4 @@
-import { createLocalIntegration, } from "./createLocalIntegration.js";
+import { createLocalIntegration } from "./createLocalIntegration.js";
 import { confirm } from "@inquirer/prompts";
 
 const keepFormPropKeys = [
@@ -8,12 +8,14 @@ const keepFormPropKeys = [
   "multistepFormSettings",
 ];
 
-export async function createLocalForm(orgSlug, formId) {
+export async function createLocalForm(orgSlug, formId, targetCMS, { qaUrl } = {}) {
   const formEndpoint = `https://truspeed.io/${orgSlug}/api/forms/${formId}`;
 
-  const localTruSpeedUrl =
-    process.env.LOCAL_TRUSPEED_URL || "http://localhost:4000";
-  const localTruSpeedOrg = process.env.LOCAL_TRUSPEED_ORG || "localhost";
+  const targetTruSpeedUrl =
+    targetCMS === "qa"
+      ? qaUrl
+      : process.env.LOCAL_TRUSPEED_URL || "http://localhost:4000";
+  const targetTruspeedOrg = targetCMS === "qa" ? process.env.QA_TRUSPEED_ORG_SLUG : process.env.LOCAL_TRUSPEED_ORG_SLUG || "localhost";
 
   console.log(`Fetching form: ${formEndpoint}`);
   const res = await fetch(formEndpoint, {
@@ -31,27 +33,60 @@ export async function createLocalForm(orgSlug, formId) {
     return null;
   }
 
-  //   if original form had an integration, we want to make that too
-  const originalIntegrationId =
-    typeof formRes?.formIntegration === "string"
-      ? formRes.formIntegration
-      : formRes?.formIntegration?.id;
-  let localIntegrationId = null;
-  if (originalIntegrationId) {
-    // prompt user if they want to create the integration as well
-    const createIntegration = await confirm({message: 'This form has an integration. Do you want to clone that locally too?'});
+  const integrationConfigs = {
+    formIntegration:
+      typeof formRes?.formIntegration === "string"
+        ? formRes.formIntegration
+        : formRes?.formIntegration?.id,
+    secondFormIntegration:
+      typeof formRes?.secondFormIntegration === "string"
+        ? formRes.secondFormIntegration
+        : formRes?.secondFormIntegration?.id,
+    metaIntegration:
+      typeof formRes?.metaIntegration === "string"
+        ? formRes.metaIntegration
+        : formRes?.metaIntegration?.id,
+    marlimarIntegration:
+      typeof formRes?.marlimarIntegration === "string"
+        ? formRes.marlimarIntegration
+        : formRes?.marlimarIntegration?.id,
+    hatchIntegration:
+      typeof formRes?.hatchIntegration === "string"
+        ? formRes.hatchIntegration
+        : formRes?.hatchIntegration?.id,
+  };
 
-    if (createIntegration) {
-      const createdIntegration = await createLocalIntegration(
-        orgSlug,
-        originalIntegrationId,
-      );
-      if (createdIntegration?.id) {
-        localIntegrationId = createdIntegration.id;
-      } else {
-        console.error(
-          `Failed to create local integration for original integration with ID ${originalIntegrationId}. Proceeding without an integration.`,
+  const localIntegrationConfigs = {
+    integration: null,
+    secondFormIntegration: null,
+    metaIntegration: null,
+    marlimarIntegration: null,
+    hatchIntegration: null,
+  };
+
+  //   if original form integrations, we want to make that too
+  for (const [key, originalIntegrationId] of Object.entries(
+    integrationConfigs,
+  )) {
+    if (originalIntegrationId) {
+      // prompt user if they want to create the integration as well
+      const createIntegration = await confirm({
+        message: `This form has ${key}. Do you want to clone that integration locally too?`,
+      });
+
+      if (createIntegration) {
+        const createdIntegration = await createLocalIntegration(
+          orgSlug,
+          originalIntegrationId,
+          `${targetTruSpeedUrl}/${targetTruspeedOrg}`,
         );
+        if (createdIntegration?.id) {
+          localIntegrationConfigs[key] = createdIntegration.id;
+        } else {
+          console.error(
+            `Failed to create local integration for original integration with ID ${originalIntegrationId}. Proceeding without an integration.`,
+          );
+        }
       }
     }
   }
@@ -74,11 +109,14 @@ export async function createLocalForm(orgSlug, formId) {
   ];
   cleanedForm["title"] = `[Imported] | ${cleanedForm["title"]} | ${orgSlug}`;
 
-  if (localIntegrationId) {
-    cleanedForm["formIntegration"] = localIntegrationId;
-  }
+  // if have any integrations, add the first one to the form (we can only add one integration when creating the form, so we prioritize the main "formIntegration" and then fallback to the others if that one doesn't exist)
+  Object.entries(localIntegrationConfigs).forEach(
+    ([key, localIntegrationId]) => {
+      if (localIntegrationId) cleanedForm[key] = localIntegrationId;
+    },
+  );
 
-  const destinationCrmUrl = `${localTruSpeedUrl}/${localTruSpeedOrg}`;
+  const destinationCrmUrl = `${targetTruSpeedUrl}/${targetTruspeedOrg}`;
   const destinationCrmApiUrl = `${destinationCrmUrl}/api/forms`;
 
   console.log(`Destination CRM URL: ${destinationCrmUrl}`);
@@ -87,7 +125,7 @@ export async function createLocalForm(orgSlug, formId) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `users API-Key ${process.env.LOCAL_PL_TOKEN}`,
+      Authorization: `users API-Key ${process.env.QA_PL_TOKEN}`,
     },
     body: JSON.stringify(cleanedForm),
   });
@@ -96,14 +134,8 @@ export async function createLocalForm(orgSlug, formId) {
   const newFormId = postResBody?.doc?.id;
   const newFormUrl = `${destinationCrmUrl}/admin/collections/forms/${newFormId}`;
 
-  const integrationUrl = localIntegrationId
-    ? `${destinationCrmUrl}/admin/collections/form-integrations/${localIntegrationId}`
-    : undefined;
-
   return {
     id: newFormId,
     url: newFormUrl,
-    integrationId: localIntegrationId,
-    integrationUrl,
   };
 }

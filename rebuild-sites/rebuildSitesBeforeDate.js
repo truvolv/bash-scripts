@@ -10,14 +10,105 @@ dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
 const FILTER_MODE = "since"; // "since" | "range"
 
 // Time is specified in Eastern Time. Use -05:00 for EST (Nov–Mar) or -04:00 for EDT (Mar–Nov, daylight saving).
-// April 29th falls within daylight saving time, so EDT (-04:00) applies here.
-const startDate = new Date("2026-04-29T09:30:00-04:00"); // 9:30 AM EDT on April 29th
+// June 10th falls within daylight saving time, so EDT (-04:00) applies here.
+const startDate = new Date("2026-06-10T11:00:00-04:00"); // 11:00 AM EDT on June 10th
 // const startDate = new Date("2026-05-04T14:20:00-04:00"); // 2:20 PM EDT on May 4th
 // const endDate = new Date("2026-05-05T13:09:00-04:00"); // only used when FILTER_MODE = "range"
-const batchSize = 1; // Number of projects to rebuild in one batch
+const batchSize = 2; // Number of projects to rebuild in one batch
 const BATCH_DELAY_MS = 3.5 * 60 * 1000; // Delay between batches (3.5 minutes)
 const DEPRIORITIZE_KEYWORDS = true; // Set to true to sort "demo" and "micro" projects to the end
 const SKIP_NAMES_LIKE = ["qa-truspd", "truspeed-v2", "truspeed"];
+// If non-empty, only these exact project names will be considered (date constraints still apply).
+// Leave empty to target all projects as usual.
+const PROJECT_FILTER = [
+  "demo-v3",
+  "the-bath-boys-tbb-main-site",
+  "carolina-home-remodeling-chr-main-site",
+  "galla-rini-roofing-gr-main-site",
+  "sweetwater-home-services-main-site-sms",
+  "bath-works-mi-bwmi-main-site",
+  "home-pro-mi-hpmi-main-site",
+  "all-american-roofing-aar-main",
+  "aspen-windows-aspen-main",
+  "wealthy-contractor-twc-main",
+  "men-with-tools-mwt-main",
+  "nulook-hd-nhd-main",
+  "jacuzzi-jbrx-fl-baths",
+  "precision-roofing-precision-roofing-main",
+  "customfit-baths-customfit-main",
+  "innovative-exteriors-main-innovative-exteriors",
+  "frey-frey-main",
+  "jacuzzi-jbrx-or-baths",
+  "jim-woods-roofing-jim-woods-roofing",
+  "jacuzzi-jbr-main",
+  "integrity-home-pro-ihp-main",
+  "paulson-monuments-paulson-monuments",
+  "mattsson-roofing-mattsson-main",
+  "floortek-floortek-main",
+  "signature-home-services-shs-main-site",
+  "jacuzzi-jbrx-atl-baths",
+  "roofing-store-roofing-store-main",
+  "erdmann-exteriors-main-erdmann-ext",
+  "floortek-ox-floors-main",
+  "jacuzzi-jbrx-az-baths",
+  "erdmann-outdoor-living-outdoor-living-main",
+  "bee-windows-bee-windows-main",
+  "jacuzzi-jbrx-sea-baths",
+  "alco-products-main-alco",
+  "jacuzzi-jbrx-stl-baths",
+  "kubala-home-improvement-main-kubala",
+  "rainsoft-great-lakes-main-great-lakes-wt",
+  "florida-energy-water-air-pure-lp-fewa-pentair-new",
+  "jacuzzi-bathwraps-promo",
+  "jjs-custom-jjs-main",
+  "black-rock-roofing-brr-main",
+  "hutchco-home-and-bath-hchb-main",
+  "ltg-coatings-ltgc-main",
+  "asp-superhome-main-asp-sh",
+  "jacuzzi-jbrx-de-baths",
+  "five-star-homes-five-star-main",
+  "refloor-refloor-main",
+  "asp-windows-main-asp-w",
+  "jacuzzi-jbrx-nc-baths",
+  "floorology-floorology",
+  "premier-home-services-phs-main",
+  "gutter-cover-kc-gckc-main",
+  "stressless-remodeling-sr-main",
+  "twin-cities-jacuzzi-main-tcj",
+  "scc-pros-swhi-main",
+  "denver-pergolas-denver-pergolas",
+  "kitchen-restyled-kitchen-restyled",
+  "bath-experts-main-bath-experts",
+  "pro-home-1-ph1-main",
+  "cornerstone-construction-cc-main",
+  "exterior-pros-ext-pros",
+  "jacuzzi-jbr-of-california",
+  "struxure-atl-struxure-atl",
+  "window-perfections-wp-main",
+  "1364-services-1364-main",
+  "endless-poxybilities-ep-main",
+  "southwest-style-southwest-main",
+  "deck-and-drive-d-a-d",
+  "continental-siding-cs-main",
+  "bluebird-windows-doors-main-bbwd",
+  "heins-contracting-hc-main",
+  "heins-contracting-hc-micro-roofing",
+  "heins-contracting-hc-micro-siding",
+  "heins-contracting-hc-micro-windows",
+  "calm-water-and-bath-cwb-main",
+  "yancey-home-improvements-yancey-main",
+  "wonder-windows-showers-baths-wwsb-main",
+  "windows-doors-carolinas-wdc-main",
+  "wonder-windows-showers-baths-wwsb-micro-baths",
+  "jacuzzi-jbr-custom",
+  "outdoor-altimate-altimate-main",
+  "outback-deck-od-main",
+  "your-home-improvement-co-yhi-main",
+  "jacuzzi-jbrx-houston-baths",
+  "southern-showers-ss-main",
+  "southern-showers-lp-welcome",
+  "peg-sur-lp-peg-sur",
+];
 
 // Vercel API URL
 const vercelUrl = `https://api.vercel.com/v13/deployments?teamId=${process.env.VERCEL_TEAM_ID}&forceNew=1`;
@@ -35,9 +126,23 @@ const filterDescription =
 console.info(
   `Starting rebuild of sites last deployed ${filterDescription} in batches of ${batchSize}...`,
 );
+if (PROJECT_FILTER.length > 0) {
+  console.info(
+    `Project filter active — only rebuilding: ${PROJECT_FILTER.join(", ")}`,
+  );
+}
 
 async function getFilteredSites() {
-  const vercelProjects = await getVercelProjects();
+  const allProjects = await getVercelProjects();
+  const vercelProjects =
+    PROJECT_FILTER.length > 0
+      ? allProjects.filter((p) => PROJECT_FILTER.includes(p.name))
+      : allProjects;
+  if (PROJECT_FILTER.length > 0) {
+    console.log(
+      `Found ${vercelProjects.length}/${PROJECT_FILTER.length} projects matching the project filter`,
+    );
+  }
 
   const filteredProjects = [];
   const erroredProjects = [];
@@ -94,7 +199,8 @@ async function getFilteredSites() {
         (lastSuccessfulDeployment < startDate &&
           lastDeployment &&
           lastDeployment > startDate) ||
-        (lastDeployment > startDate && project.latestDeploymentState === "ERROR")
+        (lastDeployment > startDate &&
+          project.latestDeploymentState === "ERROR")
       ) {
         erroredProjects.push(project);
       } else if (lastSuccessfulDeployment < startDate) {

@@ -5,7 +5,7 @@ const removeFormIntegrationPropKeys = [
   "tenant",
 ];
 
-export async function createLocalIntegration(orgSlug, integrationId) {
+export async function createLocalIntegration(orgSlug, integrationId, cmsUrl) {
   const formEndpoint = `https://truspeed.io/${orgSlug}/api/form-integrations/${integrationId}`;
 
   // check if have the required env vars
@@ -15,9 +15,6 @@ export async function createLocalIntegration(orgSlug, integrationId) {
     );
   }
 
-  const localTruSpeedUrl =
-    process.env.LOCAL_TRUSPEED_URL || "http://localhost:4000";
-  const localTruSpeedOrg = process.env.LOCAL_TRUSPEED_ORG || "localhost";
 
   console.log(`Fetching integration: ${formEndpoint}`);
   const res = await fetch(formEndpoint, {
@@ -33,6 +30,8 @@ export async function createLocalIntegration(orgSlug, integrationId) {
 
   const integrationRes = await res.json();
 
+  console.log("Integration response from server: ", integrationRes);
+
   if (!integrationRes) {
     console.error(integrationRes);
     throw new Error(`No details found for integration with ID ${integrationId} for org ${orgSlug}`);
@@ -47,12 +46,17 @@ export async function createLocalIntegration(orgSlug, integrationId) {
   cleanedFormIntegration["title"] =
     `[Imported] | ${cleanedFormIntegration["title"]} | ${orgSlug}`;
 
-  const destinationCrmUrl = `${localTruSpeedUrl}/${localTruSpeedOrg}`;
-  const destinationCrmApiUrl = `${destinationCrmUrl}/api/form-integrations`;
+    // remove partner integration if exists
+  if (cleanedFormIntegration["partnerIntegration"]) {
+    delete cleanedFormIntegration["partnerIntegration"];
+    console.warn("Removed partnerIntegration from integration before creating local integration.");
+  }
+
+  const destinationCrmApiUrl = `${cmsUrl}/api/form-integrations`;
 
   // log creating integration
   console.log(
-    `Creating local integration with title: ${cleanedFormIntegration["title"]} at ${destinationCrmUrl}...`,
+    `Creating local integration with title: ${cleanedFormIntegration["title"]} at ${destinationCrmApiUrl}...`,
   );
 
   //  post to local crm
@@ -60,14 +64,16 @@ export async function createLocalIntegration(orgSlug, integrationId) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `users API-Key ${process.env.LOCAL_PL_TOKEN}`,
+      Authorization: `users API-Key ${process.env.QA_PL_TOKEN}`,
     },
     body: JSON.stringify(cleanedFormIntegration),
   });
   const postResBody = await postRes.json();
 
+  console.log("Response from creating local integration: ", postResBody);
+
   const newIntegrationId = postResBody?.doc?.id;
-  const newIntegrationUrl = `${destinationCrmUrl}/admin/collections/form-integrations/${newIntegrationId}`;
+  const newIntegrationUrl = `${destinationCrmApiUrl}/admin/collections/form-integrations/${newIntegrationId}`;
 
 
   return {id: postResBody?.doc?.id, url: newIntegrationUrl};

@@ -5,29 +5,18 @@ const removeFormIntegrationPropKeys = [
   "tenant",
 ];
 
-export async function createLocalIntegration(orgSlug, integrationId) {
-  const formEndpoint = `https://truspeed.io/${orgSlug}/api/form-integrations/${integrationId}`;
-
-  // check if have the required env vars
-  if (!process.env.PROD_PL_TOKEN || !process.env.LOCAL_PL_TOKEN) {
-    throw new Error(
-      "Missing required env var: PROD_PL_TOKEN or LOCAL_PL_TOKEN",
-    );
-  }
-
-  const localTruSpeedUrl =
-    process.env.LOCAL_TRUSPEED_URL || "http://localhost:4000";
-  const localTruSpeedOrg = process.env.LOCAL_TRUSPEED_ORG || "localhost";
+export async function createLocalIntegration({ integrationId, source, destination }) {
+  const formEndpoint = `${source.baseUrl}/${source.orgSlug}/api/form-integrations/${integrationId}`;
 
   console.log(`Fetching integration: ${formEndpoint}`);
   const res = await fetch(formEndpoint, {
     headers: {
-      Authorization: `users API-Key ${process.env.PROD_PL_TOKEN}`,
+      Authorization: `users API-Key ${source.plToken}`,
     },
   });
 
   if (!res.ok) {
-    console.error(`Failed to fetch integration with ID ${integrationId} for org ${orgSlug}: ${res.status} ${res.statusText}`);
+    console.error(`Failed to fetch integration with ID ${integrationId} for org ${source.orgSlug}: ${res.status} ${res.statusText}`);
     return null;
   }
 
@@ -35,7 +24,7 @@ export async function createLocalIntegration(orgSlug, integrationId) {
 
   if (!integrationRes) {
     console.error(integrationRes);
-    throw new Error(`No details found for integration with ID ${integrationId} for org ${orgSlug}`);
+    throw new Error(`No details found for integration with ID ${integrationId} for org ${source.orgSlug}`);
   }
 
   const cleanedFormIntegration = Object.fromEntries(
@@ -45,9 +34,9 @@ export async function createLocalIntegration(orgSlug, integrationId) {
   );
 
   cleanedFormIntegration["title"] =
-    `[Imported] | ${cleanedFormIntegration["title"]} | ${orgSlug}`;
+    `[Imported] | ${cleanedFormIntegration["title"]} | ${source.orgSlug}`;
 
-  const destinationCrmUrl = `${localTruSpeedUrl}/${localTruSpeedOrg}`;
+  const destinationCrmUrl = `${destination.baseUrl}/${destination.orgSlug}`;
   const destinationCrmApiUrl = `${destinationCrmUrl}/api/form-integrations`;
 
   // log creating integration
@@ -60,7 +49,7 @@ export async function createLocalIntegration(orgSlug, integrationId) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `users API-Key ${process.env.LOCAL_PL_TOKEN}`,
+      Authorization: `users API-Key ${destination.plToken}`,
     },
     body: JSON.stringify(cleanedFormIntegration),
   });

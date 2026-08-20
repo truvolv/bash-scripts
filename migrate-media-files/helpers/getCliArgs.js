@@ -3,7 +3,7 @@ export function getCliArgs(argv) {
   let args = {
     dryRun: false,
     concurrency: 10,
-    batchSize: 10,
+    batchSize: 50,
     useListCheck: false,
   };
 

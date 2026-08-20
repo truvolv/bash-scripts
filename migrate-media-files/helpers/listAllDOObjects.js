@@ -18,10 +18,20 @@ export async function listAllDOObjects(s3, bucket, logStream) {
       }),
     );
 
-    const batch = (result.Contents ?? []).map((obj) => ({
-      key: obj.Key,
-      size: obj.Size ?? 0,
-    }));
+    const rawContents = result.Contents ?? [];
+    const valid = rawContents.filter(
+      (obj) => typeof obj.Key === "string" && obj.Key.length > 0,
+    );
+    if (valid.length !== rawContents.length) {
+      log(
+        "WARN",
+        `Skipped DO Spaces entries with missing Key`,
+        { page, skipped: rawContents.length - valid.length },
+        logStream,
+      );
+    }
+    const batch = valid.map((obj) => ({ key: obj.Key, size: obj.Size ?? 0 }));
+
     objects.push(...batch);
     continuationToken = result.IsTruncated
       ? result.NextContinuationToken

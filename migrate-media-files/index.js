@@ -32,18 +32,14 @@ import { buildBlobIndex } from "./helpers/buildBlobIndex.js";
 import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
 import { put } from "@vercel/blob";
 
-dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
-
-// ---------------------------------------------------------------------------
-// Fixed paths
-// ---------------------------------------------------------------------------
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+dotenv.config({ path: path.resolve(__dirname, ".env.local") });
+
 const LOGS_DIR = path.join(__dirname, "logs");
 const CSV_DIR = path.join(__dirname, "csvs");
 const LOG_FILE = path.join(LOGS_DIR, "logs.log");
 const UPLOADED_LOG_FILE = path.join(LOGS_DIR, "uploaded_media_files.log");
-const MEDIA_TO_MIGRATE_LOG = path.join(LOGS_DIR, "media_to_migrate.log");
 const UPLOADED_MEDIA_CSV = path.join(CSV_DIR, "uploaded_media_files.csv");
 const FAILED_MEDIA_CSV = path.join(CSV_DIR, "failed_media_uploads.csv");
 
@@ -200,7 +196,14 @@ async function main() {
     logStream,
   );
 
-  const stats = { copied: 0, skipped: 0, failed: 0, recopied: 0 };
+  const stats = {
+    copied: 0,
+    skipped: 0,
+    failed: 0,
+    recopied: 0,
+    totalRemaining: 0,
+    total: 0,
+  };
 
   const csv = await loadCSV(UPLOADED_MEDIA_CSV, logStream);
 
@@ -240,6 +243,7 @@ async function main() {
 
   log("INFO", `DO Spaces bucket`, { bucket }, logStream);
   const doObjects = await listAllDOObjects(s3, bucket, logStream);
+  stats.total = doObjects.length;
 
   let doObjectsToMigrate = [];
   let nextCandidateIndex = args.batchSize ? args.batchSize : doObjects.length;
@@ -282,7 +286,12 @@ async function main() {
   // SIGINT handler to gracefully stop the migration if the user presses Ctrl+C
   // this ensures that any in progress transfers are completed before the script exits
   // especially helpful when running concurrent file uploads
-  let pool;
+  const pool = runWithConcurrency(
+    doObjectsToMigrate,
+    args.concurrency,
+    (item) => migrateOneItem(item, context),
+  );
+
   process.on("SIGINT", () => {
     log(
       "WARN",
@@ -290,18 +299,17 @@ async function main() {
       undefined,
       logStream,
     );
-    if (pool) pool.abort();
+    pool.abort();
   });
 
-  pool = await runWithConcurrency(
-    doObjectsToMigrate,
-    args.concurrency,
-    (item, index) => migrateOneItem(item, context),
-  );
+  await pool.done;
 
   if (csvAppendStream) csvAppendStream.end();
   if (uploadedLogStream) uploadedLogStream.end();
   if (failedCsvStream) failedCsvStream.end();
+
+  stats.totalRemaining =
+    stats.total - (stats.copied + stats.skipped - stats.failed);
 
   log("INFO", `Migration complete`, stats, logStream);
   if (stats.failed > 0) {

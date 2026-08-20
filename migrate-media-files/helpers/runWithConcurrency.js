@@ -1,6 +1,6 @@
 // Runs a worker function on a list of items with a specified concurrency limit
 // Returns an object with an `abort` method to stop further processing
-export async function runWithConcurrency(items, concurrency, worker) {
+export function runWithConcurrency(items, concurrency, worker) {
   let index = 0;
   let aborted = false;
 
@@ -16,11 +16,12 @@ export async function runWithConcurrency(items, concurrency, worker) {
     { length: Math.min(concurrency, items.length) },
     () => next(),
   );
-  await Promise.all(workers);
+  const done = Promise.all(workers);
 
   return {
     abort: () => {
       aborted = true;
     },
+    done,
   };
 }

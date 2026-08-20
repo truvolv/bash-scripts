@@ -1,0 +1,162 @@
+[2026-08-20T18:14:42.529Z] [INFO] Starting migration {"mode":"csv","dryRun":false,"concurrency":10,"batchSize":5}
+[2026-08-20T18:14:42.533Z] [INFO] Loaded CSV {"UPLOADED_MEDIA_CSV":"/Users/edenchou/truvolv/bash-scripts/migrate-media-files/csvs/uploaded_media_files.csv","count":11}
+[2026-08-20T18:14:42.534Z] [INFO] DO Spaces bucket {"bucket":"truspeed-qa-env"}
+[2026-08-20T18:14:42.754Z] [INFO] DO Spaces page {"page":1,"batchSize":267,"totalSoFar":267}
+[2026-08-20T18:14:42.754Z] [INFO] Found DO Spaces objects {"count":267}
+[2026-08-20T18:14:42.754Z] [INFO] Limiting to first 5 unmigrated objects this run {"batchSize":5}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp-1668x629.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq-1668x629.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk-800x600.gif"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk.gif"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8-800x600.gif"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8.gif"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"CustomHomesSaratogaNY-1.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"RainSoft EC5 Product Video_2023_(1080p).mp4"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa-318x159.webp"}
+[2026-08-20T18:14:43.154Z] [INFO] Migrated {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa.webp","size":2434}
+[2026-08-20T18:14:43.297Z] [INFO] Migrated {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284-318x159.webp","size":2562}
+[2026-08-20T18:14:43.851Z] [INFO] Migrated {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf-1920x1281.webp","size":502806}
+[2026-08-20T18:14:43.921Z] [INFO] Migrated {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284.webp","size":2434}
+[2026-08-20T18:14:43.978Z] [INFO] Migrated {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf.webp","size":588088}
+[2026-08-20T18:14:43.978Z] [INFO] Migration complete {"copied":5,"skipped":11,"failed":0,"recopied":0}
+[2026-08-20T18:55:48.019Z] [INFO] Starting migration {"mode":"csv","dryRun":false,"concurrency":10,"batchSize":10}
+[2026-08-20T18:55:48.023Z] [INFO] Loaded CSV {"UPLOADED_MEDIA_CSV":"/Users/edenchou/truvolv/bash-scripts/migrate-media-files/csvs/uploaded_media_files.csv","count":16}
+[2026-08-20T18:55:48.023Z] [INFO] DO Spaces bucket {"bucket":"truspeed-qa-env"}
+[2026-08-20T18:55:48.284Z] [INFO] DO Spaces page {"page":1,"batchSize":267,"totalSoFar":267}
+[2026-08-20T18:55:48.284Z] [INFO] Found DO Spaces objects {"count":267}
+[2026-08-20T18:55:48.284Z] [INFO] Limiting to first 10 unmigrated objects this run {"batchSize":10}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp-1668x629.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq-1668x629.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk-800x600.gif"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk.gif"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8-800x600.gif"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8.gif"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"CustomHomesSaratogaNY-1.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"RainSoft EC5 Product Video_2023_(1080p).mp4"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa-318x159.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284-318x159.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf-1920x1281.webp"}
+[2026-08-20T18:55:48.285Z] [INFO] Skipping (present in CSV) {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf.webp"}
+[2026-08-20T18:55:49.489Z] [INFO] Migrated {"key":"blank_white_7sn5o1woonmklx1h_4gg0nvmxu6nfx9r0yqa9tv.jpg","size":30654}
+[2026-08-20T18:55:49.597Z] [INFO] Migrated {"key":"blank_white_7sn5o1woonmklx1h_4gg0nvmxu6nfx9r0yqa9tv-1920x1124.jpg","size":18023}
+[2026-08-20T18:55:50.207Z] [INFO] Migrated {"key":"contempo_2_9ral2l3ckufmayhx0te01-1024x684.webp","size":67196}
+[2026-08-20T18:55:50.256Z] [INFO] Migrated {"key":"bigstock_new_construction_home_with_low_166085261_3mpyttswiex1muxqsp80ht-1920x1280.jpg","size":594704}
+[2026-08-20T18:55:50.579Z] [INFO] Migrated {"key":"close_up_of_wooden_shutters_on_an_arched_window_on_royalty_free_image_1585061944_z8cvn28vsg1glkak36kuf.avif","size":256885}
+[2026-08-20T18:55:50.618Z] [INFO] Migrated {"key":"close_up_of_wooden_shutters_on_an_arched_window_on_royalty_free_image_1585061944_z8cvn28vsg1glkak36kuf-1200x900.avif","size":167361}
+[2026-08-20T18:55:50.847Z] [INFO] Migrated {"key":"build_focus_area_process___standards_d8cu9xpk3cax5vjojlo6x.pdf","size":162123}
+[2026-08-20T18:55:51.792Z] [INFO] Migrated {"key":"bigstock_white_brick_front_porch_with_r_168599909_66yy4c9nxvqg92flbg9ew4-1920x1280.jpg","size":571870}
+[2026-08-20T18:55:52.099Z] [INFO] Migrated {"key":"bigstock_new_construction_home_with_low_166085261_3mpyttswiex1muxqsp80ht.jpg","size":822058}
+[2026-08-20T18:55:52.649Z] [INFO] Migrated {"key":"bigstock_white_brick_front_porch_with_r_168599909_66yy4c9nxvqg92flbg9ew4.jpg","size":794924}
+[2026-08-20T18:55:52.649Z] [INFO] Migration complete {"copied":10,"skipped":16,"failed":0,"recopied":0}
+[2026-08-20T18:57:50.187Z] [INFO] Starting migration {"mode":"csv","dryRun":false,"concurrency":10,"batchSize":10}
+[2026-08-20T18:57:50.192Z] [INFO] Loaded CSV {"UPLOADED_MEDIA_CSV":"/Users/edenchou/truvolv/bash-scripts/migrate-media-files/csvs/uploaded_media_files.csv","count":26}
+[2026-08-20T18:57:50.192Z] [INFO] DO Spaces bucket {"bucket":"truspeed-qa-env"}
+[2026-08-20T18:57:50.391Z] [INFO] DO Spaces page {"page":1,"batchSize":267,"totalSoFar":267}
+[2026-08-20T18:57:50.391Z] [INFO] Found DO Spaces objects {"count":267}
+[2026-08-20T18:57:50.391Z] [INFO] Limiting to first 10 unmigrated objects this run {"batchSize":10}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp-1668x629.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq-1668x629.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk-800x600.gif"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk.gif"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8-800x600.gif"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8.gif"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"CustomHomesSaratogaNY-1.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"RainSoft EC5 Product Video_2023_(1080p).mp4"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa-318x159.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284-318x159.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf-1920x1281.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf.webp"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"bigstock_new_construction_home_with_low_166085261_3mpyttswiex1muxqsp80ht-1920x1280.jpg"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"bigstock_new_construction_home_with_low_166085261_3mpyttswiex1muxqsp80ht.jpg"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"bigstock_white_brick_front_porch_with_r_168599909_66yy4c9nxvqg92flbg9ew4-1920x1280.jpg"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"bigstock_white_brick_front_porch_with_r_168599909_66yy4c9nxvqg92flbg9ew4.jpg"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"blank_white_7sn5o1woonmklx1h_4gg0nvmxu6nfx9r0yqa9tv-1920x1124.jpg"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"blank_white_7sn5o1woonmklx1h_4gg0nvmxu6nfx9r0yqa9tv.jpg"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"build_focus_area_process___standards_d8cu9xpk3cax5vjojlo6x.pdf"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"close_up_of_wooden_shutters_on_an_arched_window_on_royalty_free_image_1585061944_z8cvn28vsg1glkak36kuf-1200x900.avif"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"close_up_of_wooden_shutters_on_an_arched_window_on_royalty_free_image_1585061944_z8cvn28vsg1glkak36kuf.avif"}
+[2026-08-20T18:57:50.392Z] [INFO] Skipping (present in CSV) {"key":"contempo_2_9ral2l3ckufmayhx0te01-1024x684.webp"}
+[2026-08-20T18:57:50.860Z] [INFO] Migrated {"key":"contempo_2_9ral2l3ckufmayhx0te01.webp","size":70572}
+[2026-08-20T18:57:50.869Z] [INFO] Migrated {"key":"cool_duck_3yjlzpa9e8f0kirw3yb5rli.webp","size":6230}
+[2026-08-20T18:57:51.243Z] [INFO] Migrated {"key":"customhomessaratogany_1_5d54ej5zl56r6x6xdd33sb-1256x835.webp","size":126788}
+[2026-08-20T18:57:51.320Z] [INFO] Migrated {"key":"customhomessaratogany_1_0ee6sjq23mr03fxw3l06yyn.webp","size":126788}
+[2026-08-20T18:57:51.382Z] [INFO] Migrated {"key":"customhomessaratogany_1_a4krwcmuv4yz3ayv9pi8-1256x835.webp","size":126788}
+[2026-08-20T18:57:51.412Z] [INFO] Migrated {"key":"customhomessaratogany_1_0ee6sjq23mr03fxw3l06yyn-1256x835.webp","size":126788}
+[2026-08-20T18:57:51.427Z] [INFO] Migrated {"key":"customhomessaratogany_1_a4krwcmuv4yz3ayv9pi8.webp","size":121126}
+[2026-08-20T18:57:51.469Z] [INFO] Migrated {"key":"customhomessaratogany_1_5d54ej5zl56r6x6xdd33sb.webp","size":126788}
+[2026-08-20T18:57:51.560Z] [INFO] Migrated {"key":"contempo_patio_cover_bronze_trim_renaissance_patio_1_2048x1429_sz3qe0dfmsqybx8f0ce89-1920x1340.webp","size":171380}
+[2026-08-20T18:57:51.624Z] [INFO] Migrated {"key":"contempo_patio_cover_bronze_trim_renaissance_patio_1_2048x1429_sz3qe0dfmsqybx8f0ce89.webp","size":212126}
+[2026-08-20T18:57:51.624Z] [INFO] Migration complete {"copied":10,"skipped":26,"failed":0,"recopied":0,"total":267,"totalRemaining":231}
+[2026-08-20T18:58:20.269Z] [INFO] Starting migration {"mode":"csv","dryRun":false,"concurrency":10,"batchSize":20}
+[2026-08-20T18:58:20.274Z] [INFO] Loaded CSV {"UPLOADED_MEDIA_CSV":"/Users/edenchou/truvolv/bash-scripts/migrate-media-files/csvs/uploaded_media_files.csv","count":36}
+[2026-08-20T18:58:20.274Z] [INFO] DO Spaces bucket {"bucket":"truspeed-qa-env"}
+[2026-08-20T18:58:20.599Z] [INFO] DO Spaces page {"page":1,"batchSize":267,"totalSoFar":267}
+[2026-08-20T18:58:20.599Z] [INFO] Found DO Spaces objects {"count":267}
+[2026-08-20T18:58:20.599Z] [INFO] Limiting to first 20 unmigrated objects this run {"batchSize":20}
+[2026-08-20T18:58:20.599Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp-1668x629.webp"}
+[2026-08-20T18:58:20.599Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp.webp"}
+[2026-08-20T18:58:20.599Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq-1668x629.webp"}
+[2026-08-20T18:58:20.599Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq.webp"}
+[2026-08-20T18:58:20.599Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk-800x600.gif"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk.gif"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8-800x600.gif"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8.gif"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"CustomHomesSaratogaNY-1.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"RainSoft EC5 Product Video_2023_(1080p).mp4"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa-318x159.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284-318x159.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf-1920x1281.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"bigstock_new_construction_home_with_low_166085261_3mpyttswiex1muxqsp80ht-1920x1280.jpg"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"bigstock_new_construction_home_with_low_166085261_3mpyttswiex1muxqsp80ht.jpg"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"bigstock_white_brick_front_porch_with_r_168599909_66yy4c9nxvqg92flbg9ew4-1920x1280.jpg"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"bigstock_white_brick_front_porch_with_r_168599909_66yy4c9nxvqg92flbg9ew4.jpg"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"blank_white_7sn5o1woonmklx1h_4gg0nvmxu6nfx9r0yqa9tv-1920x1124.jpg"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"blank_white_7sn5o1woonmklx1h_4gg0nvmxu6nfx9r0yqa9tv.jpg"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"build_focus_area_process___standards_d8cu9xpk3cax5vjojlo6x.pdf"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"close_up_of_wooden_shutters_on_an_arched_window_on_royalty_free_image_1585061944_z8cvn28vsg1glkak36kuf-1200x900.avif"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"close_up_of_wooden_shutters_on_an_arched_window_on_royalty_free_image_1585061944_z8cvn28vsg1glkak36kuf.avif"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"contempo_2_9ral2l3ckufmayhx0te01-1024x684.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"contempo_2_9ral2l3ckufmayhx0te01.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"contempo_patio_cover_bronze_trim_renaissance_patio_1_2048x1429_sz3qe0dfmsqybx8f0ce89-1920x1340.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"contempo_patio_cover_bronze_trim_renaissance_patio_1_2048x1429_sz3qe0dfmsqybx8f0ce89.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"cool_duck_3yjlzpa9e8f0kirw3yb5rli.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"customhomessaratogany_1_0ee6sjq23mr03fxw3l06yyn-1256x835.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"customhomessaratogany_1_0ee6sjq23mr03fxw3l06yyn.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"customhomessaratogany_1_5d54ej5zl56r6x6xdd33sb-1256x835.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"customhomessaratogany_1_5d54ej5zl56r6x6xdd33sb.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"customhomessaratogany_1_a4krwcmuv4yz3ayv9pi8-1256x835.webp"}
+[2026-08-20T18:58:20.600Z] [INFO] Skipping (present in CSV) {"key":"customhomessaratogany_1_a4krwcmuv4yz3ayv9pi8.webp"}
+[2026-08-20T18:58:20.948Z] [INFO] Migrated {"key":"download__7__1p8k94in74ih3pk6ixopck-276x183.jpg","size":12641}
+[2026-08-20T18:58:20.952Z] [INFO] Migrated {"key":"deck_drive_logo_3d5e9ulbcl99vsngg4ice4.webp","size":8688}
+[2026-08-20T18:58:20.958Z] [INFO] Migrated {"key":"deck_1_d4lqgiuhq5qblzrd5eu2va-612x408.jpg","size":45346}
+[2026-08-20T18:58:20.967Z] [INFO] Migrated {"key":"deck_drive_logo_3d5e9ulbcl99vsngg4ice4-768x219.webp","size":8994}
+[2026-08-20T18:58:20.978Z] [INFO] Migrated {"key":"deck_drive_logo_fr7viqeyo55fyo50d4z327.webp","size":8994}
+[2026-08-20T18:58:21.102Z] [INFO] Migrated {"key":"download__7__1p8k94in74ih3pk6ixopck.jpg","size":10390}
+[2026-08-20T18:58:21.144Z] [INFO] Migrated {"key":"felt_ibpl465qf7qv5rwh2lh6n-354x251.gif","size":5714}
+[2026-08-20T18:58:21.150Z] [INFO] Migrated {"key":"dock_lake_view_l8x2rhy3gjaslrkfgex3p-900x601.jpg","size":53072}
+[2026-08-20T18:58:21.151Z] [INFO] Migrated {"key":"deck_1_d4lqgiuhq5qblzrd5eu2va.jpg","size":52102}
+[2026-08-20T18:58:21.165Z] [INFO] Migrated {"key":"eye_twitch_q13lxfmbfof84932q8bcp-184x256.gif","size":8928}
+[2026-08-20T18:58:21.177Z] [INFO] Migrated {"key":"eye_twitch_q13lxfmbfof84932q8bcp.gif","size":8894}
+[2026-08-20T18:58:21.267Z] [INFO] Migrated {"key":"dock_lake_view_l8x2rhy3gjaslrkfgex3p.jpg","size":52748}
+[2026-08-20T18:58:21.348Z] [INFO] Migrated {"key":"get_the_referral_itfs595ij6lof9oky6co8_310x163_nwl1nk5lrrhn30q2ezgjv-310x163.webp","size":3962}
+[2026-08-20T18:58:21.360Z] [INFO] Migrated {"key":"get_the_referral_itfs595ij6lof9oky6co8_310x163_nwl1nk5lrrhn30q2ezgjv.webp","size":3728}
+[2026-08-20T18:58:21.395Z] [INFO] Migrated {"key":"get_the_referral_itfs595ij6lof9oky6co8_310x163_vnuf6k5x4b3berrjs6jvm-310x163.webp","size":3962}
+[2026-08-20T18:58:21.395Z] [INFO] Migrated {"key":"felt_ibpl465qf7qv5rwh2lh6n.gif","size":5838}
+[2026-08-20T18:58:21.569Z] [INFO] Migrated {"key":"deck_343bhslir6b6g5byn37xnw-1600x1067.avif","size":237847}
+[2026-08-20T18:58:21.958Z] [INFO] Migrated {"key":"deck_343bhslir6b6g5byn37xnw.avif","size":462720}
+[2026-08-20T18:58:21.984Z] [INFO] Migrated {"key":"frazzled_fssqgvwhft72q1aq281tu8.PNG","size":370986}
+[2026-08-20T18:58:22.208Z] [INFO] Migrated {"key":"frazzled_fssqgvwhft72q1aq281tu8-588x449.png","size":386849}
+[2026-08-20T18:58:22.209Z] [INFO] Migration complete {"copied":20,"skipped":36,"failed":0,"recopied":0,"totalRemaining":211,"total":267}

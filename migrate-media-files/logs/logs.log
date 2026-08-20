@@ -1,0 +1,23 @@
+[2026-08-20T18:14:42.529Z] [INFO] Starting migration {"mode":"csv","dryRun":false,"concurrency":10,"batchSize":5}
+[2026-08-20T18:14:42.533Z] [INFO] Loaded CSV {"UPLOADED_MEDIA_CSV":"/Users/edenchou/truvolv/bash-scripts/migrate-media-files/csvs/uploaded_media_files.csv","count":11}
+[2026-08-20T18:14:42.534Z] [INFO] DO Spaces bucket {"bucket":"truspeed-qa-env"}
+[2026-08-20T18:14:42.754Z] [INFO] DO Spaces page {"page":1,"batchSize":267,"totalSoFar":267}
+[2026-08-20T18:14:42.754Z] [INFO] Found DO Spaces objects {"count":267}
+[2026-08-20T18:14:42.754Z] [INFO] Limiting to first 5 unmigrated objects this run {"batchSize":5}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp-1668x629.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_860f0dvhknm4mhwleaiixp.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq-1668x629.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"1__fund_logo_hedjfd6fp7gdad3x100zn_1668x629_bxgou52upvsux6rqsz8mq.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk-800x600.gif"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_lyyopkc7szw2md3v5ltk.gif"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8-800x600.gif"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"5eeea355389655.59822ff824b72_ow0uugum1pze8d037yzp8.gif"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"CustomHomesSaratogaNY-1.webp"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"RainSoft EC5 Product Video_2023_(1080p).mp4"}
+[2026-08-20T18:14:42.755Z] [INFO] Skipping (present in CSV) {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa-318x159.webp"}
+[2026-08-20T18:14:43.154Z] [INFO] Migrated {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_d0ly4t2d1jt1fodvybz5sa.webp","size":2434}
+[2026-08-20T18:14:43.297Z] [INFO] Migrated {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284-318x159.webp","size":2562}
+[2026-08-20T18:14:43.851Z] [INFO] Migrated {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf-1920x1281.webp","size":502806}
+[2026-08-20T18:14:43.921Z] [INFO] Migrated {"key":"active_prospect_p35tctiuo8rmmlrapqh07k_318x159_t207fyv39622ooliee284.webp","size":2434}
+[2026-08-20T18:14:43.978Z] [INFO] Migrated {"key":"aria_pergola_renaissance_patio_min_2048x1366_80w95tmjc5ron9klwgdxvf.webp","size":588088}
+[2026-08-20T18:14:43.978Z] [INFO] Migration complete {"copied":5,"skipped":11,"failed":0,"recopied":0}

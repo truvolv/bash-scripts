@@ -11,14 +11,23 @@
 #
 # Requires: curl, jq
 #
-# Usage:
+# Usage (all organizations):
 #   PAYLOAD_URL=https://truspeed.io \
 #   ADMIN_EMAIL=admin@example.com \
 #   ADMIN_PASSWORD=yourpassword \
 #   bash reindex-all-orgs.sh
 #
+# Usage (specific organizations only):
+#   PAYLOAD_URL=https://truspeed.io \
+#   ADMIN_EMAIL=admin@example.com \
+#   ADMIN_PASSWORD=yourpassword \
+#   bash reindex-all-orgs.sh --org-ids 65a6d48f47660e98082e7802,6a4bb706c50a7c91a690a6a7
+#
 # Optional:
-#   LOCALE  - defaults to "en"
+#   LOCALE    - defaults to "en"
+#   --org-ids - comma or space separated list of organization/tenant IDs to
+#               reindex. When omitted, every organization is fetched and
+#               reindexed (the original behavior).
 # ============================================================
 
 set -euo pipefail
@@ -27,6 +36,24 @@ PAYLOAD_URL="${PAYLOAD_URL:-http://localhost:4000}"
 ADMIN_EMAIL="${ADMIN_EMAIL:-}"
 ADMIN_PASSWORD="${ADMIN_PASSWORD:-}"
 LOCALE="${LOCALE:-en}"
+ORG_IDS_ARG=""
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --org-ids)
+      ORG_IDS_ARG="$2"
+      shift 2
+      ;;
+    --org-ids=*)
+      ORG_IDS_ARG="${1#--org-ids=}"
+      shift
+      ;;
+    *)
+      echo "ERROR: Unknown argument: $1"
+      exit 1
+      ;;
+  esac
+done
 
 # These must match the collections listed in truspeed-v2/src/plugin/SearchOptions.ts
 COLLECTIONS_JSON='["pages","posts","page_templates","sites","modals","reusable_blocks","menus","media","locations","galleries","events","categories","reviews","team-members","tags"]'
@@ -64,22 +91,36 @@ fi
 echo "Authenticated successfully."
 echo ""
 
-# ---- 2. Fetch all organization IDs ----
-echo "Fetching organizations..."
-ORGS_RESPONSE=$(curl -s "$PAYLOAD_URL/api/organizations?limit=1000&depth=0" \
-  -H "Authorization: JWT $TOKEN")
+# ---- 2. Determine organization IDs to reindex ----
+if [ -n "$ORG_IDS_ARG" ]; then
+  # Split on commas and/or whitespace
+  mapfile -t ORG_IDS < <(echo "$ORG_IDS_ARG" | tr ',' '\n' | tr -s ' ' '\n' | sed '/^$/d')
+  ORG_COUNT=${#ORG_IDS[@]}
 
-mapfile -t ORG_IDS < <(echo "$ORGS_RESPONSE" | jq -r '.docs[].id')
-ORG_COUNT=${#ORG_IDS[@]}
+  if [ "$ORG_COUNT" -eq 0 ]; then
+    echo "ERROR: --org-ids was passed but no IDs could be parsed from it."
+    exit 1
+  fi
 
-if [ "$ORG_COUNT" -eq 0 ]; then
-  echo "ERROR: No organizations found (or failed to fetch)."
-  echo "Response: $ORGS_RESPONSE"
-  exit 1
+  echo "Reindexing $ORG_COUNT specified organization(s)."
+  echo ""
+else
+  echo "Fetching organizations..."
+  ORGS_RESPONSE=$(curl -s "$PAYLOAD_URL/api/organizations?limit=1000&depth=0" \
+    -H "Authorization: JWT $TOKEN")
+
+  mapfile -t ORG_IDS < <(echo "$ORGS_RESPONSE" | jq -r '.docs[].id')
+  ORG_COUNT=${#ORG_IDS[@]}
+
+  if [ "$ORG_COUNT" -eq 0 ]; then
+    echo "ERROR: No organizations found (or failed to fetch)."
+    echo "Response: $ORGS_RESPONSE"
+    exit 1
+  fi
+
+  echo "Found $ORG_COUNT organizations."
+  echo ""
 fi
-
-echo "Found $ORG_COUNT organizations."
-echo ""
 
 # ---- 3. Reindex each org ----
 # The `payload-tenant` cookie tells the multi-tenant plugin to scope
